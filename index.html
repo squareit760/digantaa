@@ -1,0 +1,4096 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!-- End Google Tag Manager -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  <meta name="viewport" content="initial-scale=1, maximum-scale=1">-->
+        <title>Digantaa</title>
+        <meta name="description"
+            content="Experience luxury at Ragamaya, a private pool villa resort in Munnar. Pet-friendly & 5-star amenities. Book the best resort in Munnar for a memorable stay." />
+        <meta name="keywords"
+            content="Private pool villa resort in Munnar, Resorts in Munnar, Pet friendly resort in Munnar, Best Resort in Munnar, Five star resorts in Munnar">
+        <meta name="robots" content="index, follow">
+
+        <link rel="canonical" href="index.html">
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="images/apple-touch-icon.html">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="https://assets.simplotel.com/simplotel/image/upload/x_26,y_0,w_107,h_98,r_0,c_crop,q_90/digantaa-resort/sky-logo-footer_pih5bl">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="https://assets.simplotel.com/simplotel/image/upload/x_26,y_0,w_107,h_98,r_0,c_crop,q_90/digantaa-resort/sky-logo-footer_pih5bl">
+        <link rel="manifest" href="https://assets.simplotel.com/simplotel/image/upload/x_26,y_0,w_107,h_98,r_0,c_crop,q_90/digantaa-resort/sky-logo-footer_pih5bl">
+
+        <link type="text/css" rel="stylesheet"
+            href="menu/jquery.sexy-menu.min.css" />
+        <!-- animate.css file -->
+        <link rel="preload" href="css/magnific-popup.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet"
+                href="css/magnific-popup.min.css"></noscript>
+
+        <link rel="preload" href="OwlCarousel2/owl.carousel.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet"
+                href="OwlCarousel2/owl.carousel.min.css"></noscript>
+
+        <link rel="preload" href="OwlCarousel2/owl.theme.default.min.css"
+            as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet"
+                href="OwlCarousel2/owl.theme.default.min.css"></noscript>
+
+        <link rel="preload" href="css/animate.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="styles.html"></noscript>
+
+        <link rel="preload" href="css/bootstrap.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet"
+                href="css/bootstrap.min.css"></noscript>
+
+        <link rel="stylesheet" type="text/css" media="all"
+            href="css/customize.css">
+        <link href="css/active.css" rel="stylesheet">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    <style>
+
+
+.cottage-highlights-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.cottages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+/* Large screen - all cards in one row */
+@media (min-width: 1200px) {
+    .cottages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Tablet - 2 per row */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .cottages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small screen - 1 per row */
+@media (max-width: 767px) {
+    .cottages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cottage-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent; /* transparent background */
+    border-radius: 20px;
+    padding: 15px 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #b6e2a1; /* light pista border */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.cottage-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-color: #91d18b; /* darker pista green */
+    background: transparent; /* stays transparent */
+}
+
+/* Icon */
+.cottage-icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(145, 209, 139, 0.35); /* soft pista glow */
+    transition: all 0.4s ease;
+}
+
+.cottage-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Pista overlay */
+.cottage-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(145, 209, 139, 0.25),
+        rgba(145, 209, 139, 0.05)
+    );
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+/* Hover effects */
+.cottage-card:hover .cottage-icon {
+    box-shadow: 0 12px 35px rgba(145, 209, 139, 0.55);
+    transform: scale(1.05);
+}
+
+.cottage-card:hover .cottage-icon img {
+    transform: scale(1.2);
+}
+
+.cottage-card:hover .cottage-icon::after {
+    opacity: 0.8;
+}
+
+/* Title */
+.cottage-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #91d18b; /* pista green */
+    text-align: center;
+    transition: color 0.3s ease;
+}
+.cottage-card:hover .cottage-title {
+    color: #6ab46b; /* darker pista */
+}
+
+/* Description */
+.cottage-description {
+    font-size: 16px;
+    color: #34495e;
+    line-height: 1.7;
+    transition: color 0.3s ease;
+}
+.cottage-card:hover .cottage-description {
+    color: #2c3e50;
+}
+
+/* Tags */
+.cottage-features {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.feature-tag {
+    background: #b6e2a1; /* pista green */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.cottage-card:hover .feature-tag {
+    background: #91d18b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cottage-highlights-section {
+        padding: 40px 15px;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+    .cottage-card {
+        padding: 30px 25px;
+    }
+    .cottage-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    .cottage-title {
+        font-size: 22px;
+    }
+    .cottage-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cottage-highlights-section {
+        padding: 30px 10px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .cottage-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+    .cottage-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .cottage-title {
+        font-size: 20px;
+    }
+    .cottage-description {
+        font-size: 14px;
+    }
+    .feature-tag {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.section-header {
+    animation: fadeInUp 0.8s ease forwards;
+}
+.cottage-card:nth-child(1) { animation-delay: 0.1s; }
+.cottage-card:nth-child(2) { animation-delay: 0.2s; }
+.cottage-card:nth-child(3) { animation-delay: 0.3s; }
+        </style>
+    <style>
+        /* Default: hidden on small & medium */
+.desk-nav {
+  display: none;
+}
+
+/* Show as flex on large (>= 1024px) */
+@media (min-width: 1024px) {
+  .desk-nav {
+    display: flex;
+  }
+}
+@media (max-width: 780px){
+    .d-container{
+        margin-top: 50px;
+    }
+}
+    </style>
+      
+
+    </head>
+
+    <body class="home">
+
+            
+       <nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50 border-b border-gray-100">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <div class="w-28 h-28 rounded-full flex items-center justify-center">
+                       <img src="https://assets.simplotel.com/simplotel/image/upload/x_26,y_0,w_107,h_98,r_0,c_crop,q_90/digantaa-resort/sky-logo-footer_pih5bl" alt="">
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation Menu -->
+                <!-- Menu Section -->
+<div class="desk-nav items-center space-x-8">
+    <a href="#" class="text-green-500 font-semibold text-lg hover:text-green-600 transition-colors duration-200">HOME</a>
+    <a href="#stay" class="text-gray-700 font-semibold text-lg hover:text-green-500 transition-colors duration-200">STAY</a>
+    <a href="#dining" class="text-gray-700 font-semibold text-lg hover:text-green-500 transition-colors duration-200">DINING</a>
+    <a href="#experiences" class="text-gray-700 font-semibold text-lg hover:text-green-500 transition-colors duration-200">EXPERIENCES</a>
+    <a href="#offers" class="text-gray-700 font-semibold text-lg hover:text-green-500 transition-colors duration-200">OFFERS</a>
+    <a href="#gallery" class="text-gray-700 font-semibold text-lg hover:text-green-500 transition-colors duration-200">GALLERY</a>
+</div>
+
+<!-- Contact & Book Now Section -->
+<div class="desk-nav items-center space-x-4">
+    <!-- WhatsApp Contact -->
+    <div class="flex items-center space-x-2">
+        <div class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+        </div>
+        <span class="text-gray-700 font-medium text-lg">+91759515137</span>
+    </div>
+    
+    <!-- Separator -->
+    <div class="h-6 w-px bg-gray-300"></div>
+    
+    <!-- Book Now Button -->
+    <button class="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-md text-lg transition-colors duration-200">
+        BOOK NOW
+    </button>
+</div>
+
+                
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-green-500 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#" class="block text-green-500 font-semibold text-sm py-2">HOME</a>
+                <a href="#" class="block text-gray-700 font-semibold text-sm py-2 hover:text-green-500">STAY</a>
+                <a href="#" class="block text-gray-700 font-semibold text-sm py-2 hover:text-green-500">DINING</a>
+                <a href="#" class="block text-gray-700 font-semibold text-sm py-2 hover:text-green-500">EXPERIENCES</a>
+                <a href="#" class="block text-gray-700 font-semibold text-sm py-2 hover:text-green-500">OFFERS</a>
+                <a href="#" class="block text-gray-700 font-semibold text-sm py-2 hover:text-green-500">GALLERY</a>
+                
+                <!-- Mobile Contact & Book Now -->
+                <div class="pt-4 border-t border-gray-100">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                        </div>
+                        <span class="text-gray-700 font-medium text-sm">+91759515137</span>
+                    </div>
+                    <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-md text-sm transition-colors duration-200">
+                        BOOK NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <!-- <div class="top-wraper">
+            <div id="sexy-menu">
+                <div class="top-container">
+                    <div class="header-contact">
+                        <a
+                            href="https://wa.me/917579515137?text=Hi,%20I%20am%20contacting%20you%20from%20your%20Website.!"
+                            target="_blank" title class="wh-top"><img
+                                src="images/whatsapp.png"
+                                alt="whatsapp">+917579515137</a>
+                        <a
+                            href="https://app.axisrooms.com/beV2/searchHotel.html?paxInfo=2%7C0%7C%7C&amp;allHotels=true&amp;newBe=true&amp;productId=186497&amp;bookingEngineId=4491&amp;rooms=1&amp;searchId=-1&amp;searchNumber=1"
+                            class="book" target="_blank">Book Now</a>
+                    </div>
+                    <nav id="navigation1" class="navigation">
+                        <div class="nav-header">
+                            <a class="nav-brand" href="index.html">
+                                <div class="logo">
+                                    <img
+                                        src="https://assets.simplotel.com/simplotel/image/upload/x_26,y_0,w_107,h_98,r_0,c_crop,q_90/digantaa-resort/sky-logo-footer_pih5bl"
+                                        alt="ragamaya logo" class="large" />
+                                    <img
+                                        src="https://assets.simplotel.com/simplotel/image/upload/x_26,y_0,w_107,h_98,r_0,c_crop,q_90/digantaa-resort/sky-logo-footer_pih5bl"
+                                        alt="logo" class="small" />
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div class="nav-menus-wrapper">
+                            <ul class="nav-menu align-to-right">
+                                <li><a href="#" class="home">Home</a> </li>
+                                <li><a href="#stay" class="about">Stay </a>
+                                </li>
+                                <li><a href="#dining" class="rooms">Dining </a>
+                                </li>
+                                <li><a href="#experiences" class="facilities">
+                                        Experiences</a> </li>
+                                <li><a href="#offers"
+                                        class="activities">Offers</a> </li>
+
+                                <li><a href="#gallery" class="dining"> Gallery
+                                    </a> </li>
+                            </ul>
+
+                        </div>
+                    </nav>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div> -->
+
+        <div class="whats-app">
+            <a
+                href="https://wa.me/919061680000?text=Hi,%20I%20am%20contacting%20you%20from%20your%20Website.!"
+                target="_blank" title><img alt="whatsapp"
+                    src="images/watsapp-icon.webp" title="919061680000">
+            </a>
+            <!-- call -->
+            <!-- <a
+                href="https://wa.me/919061680000?text=Hi,%20I%20am%20contacting%20you%20from%20your%20Website.!"
+                target="_blank"  title><img alt="whatsapp" src="images/call.png" title="919061680000">
+            </a> -->
+        </div>
+
+        <div id="darkBack"></div>
+        <div id="popUp">
+            <div id="close" class="close"><i class="fa fa-times"
+                    style="color: #464646 !important;"></i></div>
+            <form
+                action="https://www.ragamayamunnar.com/recaptcha-contactus.php"
+                method="post" id="callback">
+                <div class="side-form">
+                    <h3 class="side-form-title">Enquire Now </h3>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" placeholder="Name"
+                                    name="name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" placeholder="Contact No."
+                                    name="phone" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" placeholder="Email "
+                                    name="email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <textarea placeholder="Comment" rows="3"
+                                    name="comment"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 ">
+                            <div class="form-group">
+                                <input type="submit" value="SUBMIT"
+                                    class="submit-btn1" style="float: right;">
+                            </div>
+                        </div>
+                        <!-- end form-group -->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </form>
+
+        </div>
+
+        <div id="plus"><span>REQUEST A CALL BACK</span>
+            <div class="clear"></div>
+        </div>
+
+        <link rel="stylesheet" href="font-awesome/css/all.min.css" />
+        <section 
+            class="banner-wraper banner_feature  desk-content page-hero banner-wraper-home">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <!-- <img src="images/banner.webp" class="desk-view" alt="" width="1820" height="970" >
+                    <img src="images/mob-banner.webp" alt="" class="mob-view home-img" width="800" height="1345" />-->
+                    <div style="width: 100%; height: 120vh;"
+                        class="w-background-video w-background-video-atom desk-view">
+                        <video playsinline loop muted autoplay
+                            data-wf-ignore="true" data-object-fit="contain">
+                            <source src="video/banner_video.mp4"
+                                data-wf-ignore="true">
+                        </video>
+                    </div>
+
+                    <div style="width: 100%; height: 100%;"
+                        class="w-background-video w-background-video-atom mob-view">
+                        <video playsinline loop muted autoplay
+                            data-wf-ignore="true" data-object-fit="cover">
+                            <source src="video/banner_video.mp4"
+                                data-wf-ignore="true">
+                        </video>
+                    </div>
+
+                    <div class="hero-text-area">
+                        <div class="banner-caption slide-title">
+                            <div class="featured-text"> Oasis Vistas from your
+                                balcony </div>
+                            <!-- <img src="images/shape1.png" class="shape1"
+                                alt="Munnar Resorts" width="60" height="60"
+                                loading="lazy">
+                            <img src="images/shape2.png" class="shape2"
+                                alt="Resorts in Munnar" width="60" height="60"
+                                loading="lazy"> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <img src="images/banner-bg11.webp" class="banner-bg1"
+                alt="Luxury Resorts in Munnar " width="1920" height="600">
+
+        </section>
+
+        <section class="abt-container">
+        <div class="d-container" id="about">
+            <img src="images/about-bg2.webp" class="about-bg2" alt="Resorts in Munnar  " width="1920" height="800">
+            <img src="images/shape1.png" class="shape1" alt="Luxury resort" width="60" height="60" loading="lazy">
+            <div class="row abt-con center">
+                <div class="col-md-12">
+                    <div class="welcome-detail">
+                        <div class="welcome-detail-title2">
+                            <!-- Horizontal Transparent Inquiry Form -->
+                            <div class="horizontal-form-container">
+                                <form class="horizontal-form" id="inquiryForm">
+                                    <input type="text" name="name" placeholder="Name" required>
+                                    <input type="tel" name="phone" placeholder="Phone" required>
+                                    <button type="submit">SUBMIT</button>
+                                </form>
+                            </div>
+
+                            <style>
+                                .horizontal-form-container {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    /* margin-top: 40px; */
+                                }
+
+                                .horizontal-form {
+                                    display: flex;
+                                    gap: 16px;
+                                    /* background: rgba(255,255,255,0.7);  */
+                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+                                    border-radius: 12px;
+                                    padding: 16px 24px;
+                                    width: 100%;
+                                    align-items: center;
+                                }
+
+                                .horizontal-form input[type="text"],
+                                .horizontal-form input[type="tel"] {
+                                    flex: 1 1 0;
+                                    padding: 12px 16px;
+                                    border: 2px solid #4da281;
+                                    border-radius: 8px;
+                                    font-size: 1rem;
+                                    background: transparent;
+                                    color: #222;
+                                    outline: none;
+                                    transition: border-color 0.3s;
+                                }
+
+                                .horizontal-form input:focus {
+                                    border-color: #4da281;
+                                }
+
+                                .horizontal-form button {
+                                    padding: 12px 32px;
+                                    background: #4da281;
+                                    border: none;
+                                    border-radius: 8px;
+                                    font-size: 1rem;
+                                    font-weight: 600;
+                                    color: black;
+                                    cursor: pointer;
+                                    /* box-shadow: 0 2px 8px rgba(0,0,0,0.06); */
+                                    transition: background 0.3s;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                                .horizontal-form button:hover {
+                                    background: #4da281;
+                                }
+
+                                /* Responsive adjustments */
+                                @media (max-width: 700px) {
+                                    .horizontal-form {
+                                        flex-direction: column;
+                                        gap: 12px;
+                                        padding: 18px 10px;
+                                    }
+
+                                    .horizontal-form button {
+                                        width: 100%;
+                                    }
+                                }
+                            </style>
+
+                            <script>
+                                document.getElementById('inquiryForm').addEventListener('submit', function (event) {
+                                    event.preventDefault();
+                                    // Custom handling or AJAX code can be added below
+                                    alert('Form submitted!');
+                                });
+                            </script>
+                            <!-- end horizontal form -->
+                            <img src="images/abt-shape.png" class="abt-shape" alt="5-star resorts " width="144"
+                                height="153">
+
+                            <h1 class="main-heading"><!--Get Lost in the Mansion-->
+                                Stay in Cozy Mountain Cottages
+                            </h1>
+                            <!--<span class="toptxt">  </span>-->
+                        </div>
+
+                        <p style="text-align: center;"> At Digantaa, every stay is a blend of comfort
+                            and nature. Choose from our elegantly designed
+                            cottages that open to breathtaking views of the
+                            Kumaon hills.
+
+                        </p>
+
+    <style>
+
+
+.cottage-highlights-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.cottages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+/* Large screen - all cards in one row */
+@media (min-width: 1200px) {
+    .cottages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Tablet - 2 per row */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .cottages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small screen - 1 per row */
+@media (max-width: 767px) {
+    .cottages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cottage-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent; /* transparent background */
+    border-radius: 20px;
+    padding: 15px 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #b6e2a1; /* light pista border */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.cottage-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-color: #91d18b; /* darker pista green */
+    background: transparent; /* stays transparent */
+}
+
+/* Icon */
+.cottage-icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(145, 209, 139, 0.35); /* soft pista glow */
+    transition: all 0.4s ease;
+}
+
+.cottage-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Pista overlay */
+.cottage-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(145, 209, 139, 0.25),
+        rgba(145, 209, 139, 0.05)
+    );
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+/* Hover effects */
+.cottage-card:hover .cottage-icon {
+    box-shadow: 0 12px 35px rgba(145, 209, 139, 0.55);
+    transform: scale(1.05);
+}
+
+.cottage-card:hover .cottage-icon img {
+    transform: scale(1.2);
+}
+
+.cottage-card:hover .cottage-icon::after {
+    opacity: 0.8;
+}
+
+/* Title */
+.cottage-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #91d18b; /* pista green */
+    text-align: center;
+    transition: color 0.3s ease;
+}
+.cottage-card:hover .cottage-title {
+    color: #6ab46b; /* darker pista */
+}
+
+/* Description */
+.cottage-description {
+    font-size: 16px;
+    color: #34495e;
+    line-height: 1.7;
+    transition: color 0.3s ease;
+}
+.cottage-card:hover .cottage-description {
+    color: #2c3e50;
+}
+
+/* Tags */
+.cottage-features {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.feature-tag {
+    background: #b6e2a1; /* pista green */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.cottage-card:hover .feature-tag {
+    background: #91d18b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cottage-highlights-section {
+        padding: 40px 15px;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+    .cottage-card {
+        padding: 30px 25px;
+    }
+    .cottage-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    .cottage-title {
+        font-size: 22px;
+    }
+    .cottage-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cottage-highlights-section {
+        padding: 30px 10px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .cottage-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+    .cottage-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .cottage-title {
+        font-size: 20px;
+    }
+    .cottage-description {
+        font-size: 14px;
+    }
+    .feature-tag {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.section-header {
+    animation: fadeInUp 0.8s ease forwards;
+}
+.cottage-card:nth-child(1) { animation-delay: 0.1s; }
+.cottage-card:nth-child(2) { animation-delay: 0.2s; }
+.cottage-card:nth-child(3) { animation-delay: 0.3s; }
+        </style>
+
+
+
+
+                        <div class="cottage-highlights-section">
+                            <div class="cottages-grid">
+                                <div class="cottage-card cottage-1" data-cottage="tesia">
+                                    <div class="cottage-icon">
+                                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                            alt="Tesia Cottage" loading="lazy">
+                                    </div>
+                                    <h3 class="cottage-title">Tesia
+                                        Cottage</h3>
+                                    <div class="cottage-features">
+                                        <span class="feature-tag">Cozy
+                                            Wooden Interiors</span>
+                                        <span class="feature-tag">Private
+                                            Balcony</span>
+                                        <span class="feature-tag">Nature
+                                            Views</span>
+                                    </div>
+                                </div>
+
+                                <div class="cottage-card cottage-2" data-cottage="yuhina"
+                                    onclick="handleCottageClick('yuhina')">
+                                    <div class="cottage-icon">
+                                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                            alt="Yuhina Cottage" loading="lazy">
+                                    </div>
+                                    <h3 class="cottage-title">Yuhina
+                                        Cottage</h3>
+
+                                    <div class="cottage-features">
+                                        <span class="feature-tag">Spacious
+                                            Living</span>
+                                        <span class="feature-tag">Valley-Facing
+                                            Windows</span>
+                                        <span class="feature-tag">Premium
+                                            Amenities</span>
+                                    </div>
+                                </div>
+
+                                <div class="cottage-card cottage-3" data-cottage="whistler"
+                                    onclick="handleCottageClick('whistler')">
+                                    <div class="cottage-icon">
+                                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                            alt="Whistler Cottage" loading="lazy">
+                                    </div>
+                                    <h3 class="cottage-title">Whistler
+                                        Cottage</h3>
+                                    <div class="cottage-features">
+                                        <span class="feature-tag">Family-Friendly</span>
+                                        <span class="feature-tag">Designed
+                                            With Rustic
+                                            Elegance.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <a href="about.html" class="know-more">Request a
+                                Rate <img src="images/right-arrow-blue.webp"
+                                    class="right-arrow" alt="Munnar, Kerala"
+                                    width="512" height="512"> </a> -->
+
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-7">
+                        <div class="abt-shapee">
+                            <img src="images/abt1.webp" width="732" height="700"
+                                class="abt-home img-full"
+                                alt="Ragamaya Resort Munnar">
+                            <img src="images/abt1-shape.webp" class="abt1-shape"
+                                alt="Resort  at Munnar" width="300"
+                                height="277">
+                        </div>
+                    </div> -->
+
+            </div>
+            <!-- cottages highlites start   -->
+
+            <!-- cottages highlites end   -->
+   
+        </section>
+
+            <!-- Accomodation Picturesque -->
+
+            <section class="project-container">
+                <img src="images/projectbg.webp" width="1920" height="1200"
+                    class="projectbg" alt="Ragamaya">
+                <div class="d-container">
+                    <img src="images/vector1.png" class="vector1"
+                        alt=" Munnar Accommodation " width="200" height="200">
+                    <img src="images/vector2.png" class="vector2"
+                        alt=" Picturesque Munnar" width="200" height="174">
+                    <img src="images/vector3.png" class="vector3"
+                        alt="Top resort in Munnar" width="162" height="140">
+                    <div class="welcome-detail-title2"
+                        style="margin-bottom: 20px;">
+                        <span> Flavors of Kumaon & Beyond </span>
+                    </div>
+                    <p style="text-align: center; padding: 0 20px;">
+                        Savor farm-fresh ingredients and local delicacies
+                        crafted
+                        by our chefs. From authentic Kumaoni cuisine to
+                        international favorites, every meal is an experience to
+                        remember.
+                    </p>
+
+                    <!-- <div class="tab-content">
+                    <div id="tessia" class="tab-pane fade in active">
+                        <div class="rooms-wrap">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="room-img">
+                                        <img
+                                            src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3330/x_0,y_259,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DJI_0298"
+                                            width="751" height="574"
+                                            class="img-full"
+                                            alt="munnar top resorts">
+                                        <img src="images/room-bg1.webp"
+                                            class="room-bg1"
+                                            alt="places to visit in kerala munnar"
+                                            width="751" height="326">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img
+                                        src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5095_cpzgcu"
+                                        width="537" height="332"
+                                        class="img-full"
+                                        alt="munnar resorts swimming pool ">
+
+                                    <div class="room-item">
+                                        <img src="images/rshape1.png"
+                                            class="rshape1"
+                                            alt="Ponmudi  Grand Suite"
+                                            width="187" height="122">
+                                        <img src="images/rshape2.png"
+                                            class="rshape2"
+                                            alt="Ponmudi  Grand Suite Munnar"
+                                            width="187" height="122">
+                                        <h4 class="caption2">Tesia Cottages</h4>
+                                        <span class="roomspan"> Grand Suite
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Raga" class="tab-pane fade in">
+                        <div class="rooms-wrap">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="room-img">
+                                        <img
+                                            src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3330/x_0,y_259,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5288"
+                                            class="img-full"
+                                            alt="lake view resort munnar"
+                                            width="751" height="574">
+                                        <img src="images/room-bg1.webp"
+                                            class="room-bg1"
+                                            alt="munnar tourist destination"
+                                            width="751" height="326">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img
+                                        src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3164/x_0,y_176,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC4917"
+                                        class="img-full"
+                                        alt="tourist attractions munnar"
+                                        width="537" height="332">
+
+                                    <div class="room-item">
+                                        <img src="images/rshape1.png"
+                                            class="rshape1"
+                                            alt="Lake View Resort" width="187"
+                                            height="122">
+                                        <img src="images/rshape2.png"
+                                            class="rshape2"
+                                            alt="Ragamaya Luxury Rooms "
+                                            width="187" height="122">
+                                        <h4 class="caption2">Yuhina
+                                            Cottages</h4>
+                                        <span class="roomspan"> Luxury Rooms
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Aranyamaya" class="tab-pane fade in">
+                        <div class="rooms-wrap">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="room-img">
+                                        <img
+                                            src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3323/x_0,y_255,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5046_c9orx5"
+                                            class="img-full"
+                                            alt="spots to visit in munnar"
+                                            width="751" height="574">
+                                        <img src="images/room-bg1.webp"
+                                            class="room-bg1"
+                                            alt="resorts in munnar kerala"
+                                            width="751" height="326">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img
+                                        src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3337/x_0,y_262,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5070_roicqd"
+                                        class="img-full"
+                                        alt="resorts in kerala munnar"
+                                        width="537" height="332">
+
+                                    <div class="room-item">
+                                        <img src="images/rshape1.png"
+                                            class="rshape1"
+                                            alt="kerala munnar resort"
+                                            width="187" height="122">
+                                        <img src="images/rshape2.png"
+                                            class="rshape2"
+                                            alt="resorts at munnar" width="187"
+                                            height="122">
+                                        <h4 class="caption2">Myna Cottages</h4>
+                                        <span class="roomspan">Family Cottage
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Aranyaleela" class="tab-pane fade in">
+                        <div class="rooms-wrap">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="room-img">
+                                        <img
+                                            src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3330/x_0,y_259,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DJI_0326_-_Copy"
+                                            class="img-full"
+                                            alt="munnar cottage booking"
+                                            width="751" height="574">
+                                        <img src="images/room-bg1.webp"
+                                            class="room-bg1"
+                                            alt="munnar resorts for family with private pool"
+                                            width="751" height="326">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img
+                                        src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3305/x_0,y_246,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC4964_-_Copy"
+                                        class="img-full"
+                                        alt="munnar resorts for couples"
+                                        width="537" height="332">
+
+                                    <div class="room-item">
+                                        <img src="images/rshape1.png"
+                                            class="rshape1"
+                                            alt="rooms in munnar for couples"
+                                            width="187" height="122">
+                                        <img src="images/rshape2.png"
+                                            class="rshape2"
+                                            alt="Ragamaya rooms" width="187"
+                                            height="122">
+                                        <h4 class="caption2">Magpie
+                                            Cottages</h4>
+                                        <span class="roomspan"> Honeymoon
+                                            Cottage </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <ul id="accommodation-tab" class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#tessia" data-toggle="tab"
+                            class="tab-btn">Tesia Cottages <span> Grand Suite
+                            </span></a></li>
+                    <li><a href="#Raga" data-toggle="tab" class="tab-btn">Yuhina
+                            Cottages <span>Luxury Rooms </span></a></li>
+                    <li><a href="#Aranyamaya" data-toggle="tab"
+                            class="tab-btn">Myna Cottages <span>Family Cottage
+                            </span></a></li>
+                    <li><a href="#Aranyaleela" data-toggle="tab"
+                            class="tab-btn">Magpie Cottages <span>Honeymoon
+                                Cottage </span></a></li>
+                </ul> -->
+                </div>
+
+                <style>
+        .dining-section {
+            width: 100%;
+            /* background: rgba(255, 255, 255, 0.96); */
+            /* border-radius: 20px; */
+            /* border: 1px solid black; */
+            overflow: hidden;
+            padding: 0 80px;
+            /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); */
+        }
+
+        .dining-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-bottom: 0px;
+            /* min-height: 500px; */
+            /* align-items: center; */
+        }
+
+        .dining-content {
+            padding: 10px 80px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+            /* justify-content: center; */
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .highlights-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+            border: 1px solid #4DA482;
+            border-radius: 50px;
+        }
+
+        .highlight-item:hover {
+            transform: translateX(10px);
+        }
+
+        .bullet-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px 23px;
+            margin-right: 20px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px #BBF0D9;
+            transition: all 0.3s ease;
+            padding: 3px;
+        }
+
+        .bullet-icon img {
+            width: 49%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        
+
+        .highlight-text {
+            font-size: 18px;
+            color: #34495e;
+            font-weight: 500;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .dining-image {
+            position: relative;
+            height: 100%;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .dining-image img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border-radius: 50px;
+        }
+
+        .dining-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dining-image:hover .image-overlay {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .dining-container {
+                grid-template-columns: 1fr;
+            }
+
+            .dining-content {
+                padding: 40px 30px;
+                order: 1;
+            }
+
+            .dining-image {
+                order: 2;
+                min-height: 400px;
+            }
+
+            .section-title {
+                font-size: 36px;
+                text-align: center;
+            }
+
+            .highlight-item {
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+
+            .bullet-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .highlight-text {
+                text-align: center;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dining-section {
+                border-radius: 15px;
+                margin: 10px;
+            }
+
+            .dining-content {
+                padding: 30px 25px;
+            }
+
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 25px;
+            }
+
+            .dining-image {
+                min-height: 350px;
+            }
+
+            .bullet-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .highlight-text {
+                font-size: 16px;
+            }
+
+            .highlight-item {
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .dining-content {
+                padding: 25px 20px;
+            }
+
+            .section-title {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .dining-image {
+                min-height: 300px;
+            }
+
+            .bullet-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .highlight-text {
+                font-size: 15px;
+            }
+
+            .highlight-item {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .dining-content {
+            animation: fadeInLeft 0.8s ease forwards;
+        }
+
+        .dining-image {
+            animation: fadeInRight 0.8s ease forwards;
+        }
+
+        .highlight-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .highlight-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .highlight-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+
+    </style>
+                <div class="dining-section">
+                    <div class="dining-container">
+                        <div class="dining-content">
+                            <!-- <h2 class="section-title">Highlights</h2> -->
+                            <ul class="highlights-list">
+                                <li class="highlight-item">
+                                    <div class="bullet-icon">
+                                        <img
+                                            src="./images/right-black.png"
+                                            alt="Farm to Table" loading="lazy">
+                                    </div>
+                                    <span class="highlight-text">Farm-to-table
+                                        dining</span>
+                                </li>
+                                <li class="highlight-item"
+                                    style="margin-left: 20px;">
+                                    <div class="bullet-icon">
+                                        <img
+                                            src="./images/right-black.png"
+                                            alt="Breakfast" loading="lazy">
+                                    </div>
+                                    <span class="highlight-text">Complimentary
+                                        breakfast with every stay</span>
+                                </li>
+                                <li class="highlight-item">
+                                    <div class="bullet-icon">
+                                        <img
+                                            src="./images/right-black.png"
+                                            alt="Valley Views" loading="lazy">
+                                    </div>
+                                    <span class="highlight-text">Open-air dining
+                                        with valley views</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dining-image">
+                            <img
+                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3365/x_0,y_276,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5397_a1au7o"
+                                alt="Outdoor dining setup with mountain views"
+                                loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+        // Add interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const highlightItems = document.querySelectorAll('.highlight-item');
+            
+            highlightItems.forEach((item, index) => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+
+                // Add click interaction
+                item.addEventListener('click', function() {
+                    const text = this.querySelector('.highlight-text').textContent;
+                    console.log(`Highlight clicked: ${text}`);
+                    
+                    // Add a subtle pulse effect
+                    const icon = this.querySelector('.bullet-icon');
+                    icon.style.transform = 'scale(1.2)';
+                    setTimeout(() => {
+                        icon.style.transform = '';
+                    }, 200);
+                });
+            });
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe highlight items for stagger animation
+            highlightItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+
+        // Add touch support for mobile
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.highlight-item').forEach(item => {
+                item.addEventListener('touchstart', function() {
+                    this.style.transform = 'translateX(5px) scale(0.98)';
+                });
+                
+                item.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 100);
+                });
+            });
+        }
+    </script>
+            </section>
+
+            <!-- Experiences start -->
+
+            <style>
+
+        .experiences-section {
+            /* max-width: 1200px; */
+            width: 100%;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-description {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .experience-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .experience-card:hover::before {
+            left: 100%;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            background: white;
+        }
+
+        .card-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .experience-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 30px #A5EACC;
+
+        }
+
+        .experience-card:hover .card-icon img {
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .card-description-adventure {
+            font-size: 16px;
+            color: #7f8c8d;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        .experience-card:hover .card-title {
+            color: #3498db;
+        }
+
+        .experience-card:hover .card-description {
+            color: #2c3e50;
+        }
+
+        /* Different gradient overlays for each card */
+        .card-1 .card-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(39, 174, 96, 0.2));
+            border-radius: 50%;
+        }
+
+        .card-2 .card-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(41, 128, 185, 0.2));
+            border-radius: 50%;
+        }
+
+        .card-3 .card-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.2), rgba(192, 57, 43, 0.2));
+            border-radius: 50%;
+        }
+
+        .card-4 .card-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.2), rgba(142, 68, 173, 0.2));
+            border-radius: 50%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .experiences-section {
+                padding: 40px 15px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .section-description {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+
+            .experiences-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-top: 30px;
+            }
+
+            .experience-card {
+                padding: 30px 20px;
+            }
+
+            .card-icon {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+
+            .card-title {
+                font-size: 22px;
+            }
+
+            .card-description {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .experiences-section {
+                padding: 30px 10px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-description {
+                font-size: 15px;
+            }
+
+            .experience-card {
+                padding: 25px 15px;
+                border-radius: 20px;
+            }
+
+            .card-icon {
+                width: 90px;
+                height: 90px;
+            }
+
+            .card-title {
+                font-size: 20px;
+            }
+
+            .card-description {
+                font-size: 14px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .experience-card {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .experience-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .experience-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .experience-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .experience-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+    </style>
+            <div class="experiences-section" id="experiences">
+                <div class="section-header">
+                    <div class="welcome-detail-title2"
+                        style="margin-bottom: 20px;">
+                        <span> Unforgettable Experiences Await You </span>
+                    </div>
+                    <p class="section-description">
+                        Reconnect with yourself and nature through activities
+                        designed for relaxation and adventure.
+                        Whether it's a soothing spa session, cycling through
+                        pine
+                        trails, or exploring nearby waterfalls,
+                        Digantaa has it all.
+                    </p>
+                </div>
+
+                <div class="experiences-grid">
+                    <div class="experience-card card-1" data-experience="spa"
+                        onclick="handleExperienceClick('spa')">
+                        <div class="card-icon">
+                            <img
+                                src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                alt="Spa & Sauna" loading="lazy">
+                        </div>
+                        <h3 class="card-title">Spa & Sauna</h3>
+                        <p class="card-description-adventure">Revitalize your
+                            body and
+                            mind
+                            with our premium wellness treatments and relaxing
+                            sauna
+                            sessions.</p>
+                    </div>
+
+                    <div class="experience-card card-2"
+                        data-experience="adventure">
+                        <div class="card-icon">
+                            <img
+                                src="https://www.doutdooradventure.com/images/zipline.jpg"
+                                alt="Outdoor Adventures" loading="lazy">
+                        </div>
+                        <h3 class="card-title">Outdoor Adventures</h3>
+                        <p class="card-description-adventure">Cycling, trekking,
+                            and
+                            nature
+                            walks through scenic pine trails and mountain
+                            paths.</p>
+                    </div>
+
+                    <div class="experience-card card-3"
+                        data-experience="bonfire">
+                        <div class="card-icon">
+                            <img
+                                src="https://media.istockphoto.com/id/819949828/photo/late-evening-campfire-at-a-beatiful-canadian-chalet.jpg?s=612x612&w=0&k=20&c=sD663Ow_2NihMqeefmUiKW5xvBg-1C_ySA90CZuj17o="
+                                alt="Bonfire Nights" loading="lazy">
+                        </div>
+                        <h3 class="card-title">Bonfire Nights</h3>
+                        <p class="card-description-adventure">Cozy evenings
+                            under starlit
+                            skies with warm fires and memorable
+                            conversations.</p>
+                    </div>
+
+                    <div class="experience-card card-4"
+                        data-experience="attractions">
+                        <div class="card-icon">
+                            <img
+                                src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_269,w_719,h_404,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/WhatsApp_Image_2024-10-14_at_12.27.22_PM_w2rfen"
+                                alt="Nearby Attractions" loading="lazy">
+                        </div>
+                        <h3 class="card-title">Nearby Attractions</h3>
+                        <p class="card-description-adventure">Mukteshwar Temple,
+                            waterfalls,
+                            and more scenic destinations within easy reach.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+        function handleExperienceClick(experienceType) {
+            const messages = {
+                spa: 'Spa & Sauna experience selected! Perfect for relaxation and rejuvenation.',
+                adventure: 'Outdoor Adventures selected! Ready for cycling, trekking, and nature walks.',
+                bonfire: 'Bonfire Nights selected! Cozy evenings under the stars await.',
+                attractions: 'Nearby Attractions selected! Explore temples, waterfalls, and scenic spots.'
+            };
+            
+            // Add click animation
+            const card = document.querySelector(`[data-experience="${experienceType}"]`);
+            card.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                card.style.transform = '';
+                alert(messages[experienceType]);
+                console.log(`Experience selected: ${experienceType}`);
+            }, 150);
+        }
+
+        // Add interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.experience-card');
+            
+            cards.forEach((card, index) => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+
+        // Add touch support for mobile
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.experience-card').forEach(card => {
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98) translateY(-5px)';
+                });
+                
+                card.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 100);
+                });
+            });
+        }
+    </script>
+
+            <!-- Experiences end -->
+
+            <!-- <script>
+// Pure JavaScript - No jQuery dependency
+let autoSlideInterval;
+let currentTab = 0;
+const totalTabs = 4;
+
+function showTab(index) {
+    // Get all tab buttons and content panes
+    const tabButtons = document.querySelectorAll('#accommodation-tab li');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    // Remove active class from all tabs and panes
+    tabButtons.forEach(tab => tab.classList.remove('active'));
+    tabPanes.forEach(pane => pane.classList.remove('active'));
+    
+    // Add active class to current tab and pane
+    if (tabButtons[index]) {
+        tabButtons[index].classList.add('active');
+    }
+    
+    // Get target pane ID and show it
+    const targetHref = tabButtons[index]?.querySelector('a')?.getAttribute('href');
+    if (targetHref) {
+        const targetPane = document.querySelector(targetHref);
+        if (targetPane) {
+            targetPane.classList.add('active');
+        }
+    }
+}
+
+function nextTab() {
+    currentTab = (currentTab + 1) % totalTabs;
+    showTab(currentTab);
+    console.log('Auto-slide to tab:', currentTab); // Debug log
+}
+
+function prevTab() {
+    currentTab = (currentTab - 1 + totalTabs) % totalTabs;
+    showTab(currentTab);
+}
+
+function startAutoSlide() {
+    console.log('Starting auto-slide...'); // Debug log
+    autoSlideInterval = setInterval(nextTab, 3000); // 3 seconds
+}
+
+function stopAutoSlide() {
+    if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+        console.log('Auto-slide stopped'); // Debug log
+    }
+}
+
+function restartAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+}
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, setting up navigation...'); // Debug log
+    
+    // Left button click
+    const leftBtn = document.getElementById('accommodation-left');
+    if (leftBtn) {
+        leftBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            prevTab();
+            restartAutoSlide();
+        });
+    }
+    
+    // Right button click
+    const rightBtn = document.getElementById('accommodation-right');
+    if (rightBtn) {
+        rightBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            nextTab();
+            restartAutoSlide();
+        });
+    }
+    
+    // Direct tab clicks
+    const tabLinks = document.querySelectorAll('#accommodation-tab a[data-toggle="tab"]');
+    tabLinks.forEach((link, index) => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            currentTab = index;
+            showTab(currentTab);
+            restartAutoSlide();
+        });
+    });
+    
+    // Hover pause functionality
+    const container = document.querySelector('.project-container');
+    if (container) {
+        container.addEventListener('mouseenter', stopAutoSlide);
+        container.addEventListener('mouseleave', startAutoSlide);
+    }
+    
+    // Start auto-slide immediately
+    startAutoSlide();
+});
+
+// Fallback: Start auto-slide after a delay if DOM isn't ready
+setTimeout(function() {
+    if (!autoSlideInterval) {
+        console.log('Fallback: Starting auto-slide after delay...'); // Debug log
+        startAutoSlide();
+    }
+}, 1000);
+</script> -->
+
+            <!-- offers start -->
+            <section class="luxury-container">
+                <div class="d-container">
+                    <div class="welcome-detail-title2">
+
+                        <style>
+
+        .offers-section {
+            background: transparent;
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: #333333;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .offers-container {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .offer-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgb(196 245 255);
+               padding: 14px 15px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            min-width: 280px;
+        }
+
+        .offer-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-color: #3498db;
+            background: white;
+        }
+
+        .offer-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .offer-icon img {
+            width: 60%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .offer-item:hover .offer-icon {
+            transform: scale(1.1);
+        }
+
+        .offer-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .offer-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 8px;
+            opacity: 0.9;
+        }
+
+        .offer-item:nth-child(2) .offer-badge {
+            background: #27ae60;
+        }
+
+        .offer-item:nth-child(3) .offer-badge {
+            background: #f39c12;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .offers-container {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .offer-item {
+                min-width: 260px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .section-description {
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .offers-section {
+                padding: 30px 15px;
+            }
+
+            .section-header {
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-description {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+
+            .offers-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .offer-item {
+                min-width: 100%;
+                max-width: 400px;
+                padding: 18px 20px;
+            }
+
+            .offer-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .offer-title {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .offers-section {
+                padding: 20px 10px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .section-description {
+                font-size: 15px;
+            }
+
+            .offer-item {
+                padding: 15px 18px;
+                border-radius: 40px;
+            }
+
+            .offer-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .offer-title {
+                font-size: 14px;
+            }
+
+            .offer-badge {
+                font-size: 9px;
+                padding: 1px 6px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .offer-item {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .offer-item:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .offer-item:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .section-header {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+                        <div class="offers-section" id="offers">
+                            <div class="section-header">
+                                <div class="welcome-detail-title2">
+
+                                    <span>Exclusive Seasonal Offers</span>
+                                </div>
+                                <p class="section-description">Make your stay
+                                    even
+                                    more memorable with our limited-time deals.
+                                    Book
+                                    directly with us and enjoy exclusive
+                                    perks.</p>
+                            </div>
+
+                            <div class="offers-container">
+                                <div class="offer-item" data-offer="nights"">
+                                    <div class="offer-icon">
+                                        <img src="./images/hotel.png"
+                                            alt="Stay Offer" loading="lazy">
+                                    </div>
+                                    <div class="offer-text">
+                                        <h3 class="offer-title">Stay 3 Nights,
+                                            Pay
+                                            for </h3>
+                                    </div>
+                                </div>
+
+                                <div class="offer-item" data-offer="monsoon" ">
+                                    <div class="offer-icon">
+                                        <img src="./images/cloud.png"
+                                            alt="Monsoon Package"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="offer-text">
+                                        <h3 class="offer-title">Monsoon Delight
+                                            Package with Spa Voucher.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="offer-item" data-offer="earlybird"
+                                    ">
+                                    <div class="offer-icon">
+                                        <img src="./images/offer.png"
+                                            alt="Early Bird Discount"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="offer-text">
+                                        <h3 class="offer-title">Early Bird
+                                            Discounts
+                                            for Advance Booking.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- offers cards start -->
+
+                    <!-- offers cards end -->
+
+                    <!-- <div class="row">
+                    <div class="cta-txt">
+                        <span>Sheer </span>
+                        <h2>Beauty </h2>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=5hU951XHocA"
+                        class="youtube luxury-icon">
+                        <div class="playbtn2">
+                            <img src="images/playicon2.png" width="69"
+                                height="65" loading="lazy">
+                        </div>
+                    </a>
+                </div> -->
+                </div>
+            </section>
+            <!-- offers end -->
+
+            <!-- icon container -->
+            <!-- <section class="icon-container">
+            <div class="d-container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="icon-list">
+                            <div class="icon-img">
+                                <img src="images/icon1.png"
+                                    alt="munnar family resort" width="60"
+                                    height="60" loading="lazy">
+                            </div>
+                            <div class="icon-content">
+                                <h4>Best Deals </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="icon-list">
+                            <div class="icon-img">
+                                <img src="images/icon2.png"
+                                    alt="best resorts at munnar" width="60"
+                                    height="60" loading="lazy">
+                            </div>
+                            <div class="icon-content">
+                                <h4>Free Wifi</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="icon-list">
+                            <div class="icon-img">
+                                <img src="images/icon3.png"
+                                    alt="best resorts at munnar" width="60"
+                                    height="60" loading="lazy">
+                            </div>
+                            <div class="icon-content">
+                                <h4>Free Cancellation</h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="icon-list">
+                            <div class="icon-img">
+                                <img src="images/icon4.png" alt="Ragamaya"
+                                    width="60" height="60" loading="lazy">
+                            </div>
+                            <div class="icon-content">
+                                <h4>Best Price Guarantee</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> -->
+
+            <style>
+.gallery-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 10px;
+    width: calc(33.333% - 20px); /* Desktop - 3 images */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.image-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.image-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4DA482;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 3.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-controls:hover {
+    background: #3d8b69;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 5px 15px rgba(77, 164, 130, 0.4);
+}
+
+.prev-btn {
+    left: 3px;
+}
+
+.next-btn {
+    right: 3px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #4DA482;
+    transform: scale(1.2);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) and (max-width: 991px) {
+    .carousel-slide {
+        width: calc(50% - 20px); /* Tablet - 2 images */
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-slide {
+        width: calc(100% - 20px); /* Mobile - 1 image */
+        margin: 0 10px;
+    }
+    
+    .carousel-controls {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .prev-btn {
+        left: 10px;
+    }
+    
+    .next-btn {
+        right: 10px;
+    }
+}
+</style>
+            <section class="explore-container" id="gallery">
+                <div class="d-container">
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                        </div>
+                         <img
+                                src="images/shape4.png" class="shape4"
+                                alt="Ragamaya" width="60" height="60"
+                                loading="lazy">
+                                <div class="welcome-detail-title2">
+
+                                    <span > A Glimpse of Paradise
+                                    </span>
+                                </div>
+                        <p style="text-align: center;"> Browse through our
+                            gallery
+                            and let the beauty of Digantaa captivate you even
+                            before
+                            you arrive.</p>
+
+                        <div class="col-md-12">
+                            <div class="welcome-detail">
+                                <div class="gallery-carousel">
+                                    <div class="carousel-wrapper">
+                                        <div class="carousel-track"
+                                            id="carouselTrack">
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_42,w_800,h_449,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/g3_xrh67f"
+                                                    alt="Resort View 1">
+                                                <div class="image-overlay">
+                                                    <div
+                                                        class="image-title">Luxurious
+                                                        Rooms</div>
+                                                    <div
+                                                        class="image-description">Experience
+                                                        comfort redefined</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_42,w_800,h_449,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/g31_eh4vhi"
+                                                    alt="Resort View 2">
+                                                <div class="image-overlay">
+                                                    <div
+                                                        class="image-title">Infinity
+                                                        Pool</div>
+                                                    <div
+                                                        class="image-description">Relax
+                                                        by the pristine
+                                                        waters</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_42,w_800,h_449,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/g21_lubily"
+                                                    alt="Resort View 3">
+                                                <div class="image-overlay">
+                                                    <div
+                                                        class="image-title">Fine
+                                                        Dining</div>
+                                                    <div
+                                                        class="image-description">Culinary
+                                                        excellence awaits</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_42,w_800,h_449,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/g27_lkyqva"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_33,w_640,h_360,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/g2_wj2ikv"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_42,w_800,h_449,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/g16_mzqo7d"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_42,w_800,h_449,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/g1_jk9wix"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3330/x_0,y_259,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DJI_0326_yvzihz"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3330/x_0,y_259,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DJI_0499_mzt0nd"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3334/x_0,y_261,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5140_pabjah"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_2405/x_362,y_0,w_4276,h_2405,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5442_stitch_gkvicm"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            class="carousel-controls prev-btn"
+                                            id="prevBtn">&#8249;</button>
+                                        <button
+                                            class="carousel-controls next-btn"
+                                            id="nextBtn">&#8250;</button>
+                                    </div>
+
+                                    <div class="carousel-dots"
+                                        id="carouselDots"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <script>
+class GalleryCarousel {
+    constructor() {
+        this.track = document.getElementById('carouselTrack');
+        this.prevBtn = document.getElementById('prevBtn');
+        this.nextBtn = document.getElementById('nextBtn');
+        this.dotsContainer = document.getElementById('carouselDots');
+        this.slides = document.querySelectorAll('.carousel-slide');
+        this.currentIndex = 0;
+        this.slidesToShow = this.getSlidesToShow();
+        
+        this.init();
+        this.updateCarousel();
+        
+        window.addEventListener('resize', () => {
+            this.slidesToShow = this.getSlidesToShow();
+            this.updateCarousel();
+            this.updateDots();
+        });
+    }
+    
+    getSlidesToShow() {
+        if (window.innerWidth >= 992) return 3; // Desktop - 3 images
+        if (window.innerWidth >= 768) return 2; // Tablet - 2 images
+        return 1; // Mobile - 1 image
+    }
+    
+    init() {
+        this.createDots();
+        
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        // Touch support
+        let startX = 0;
+        let endX = 0;
+        
+        this.track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        this.track.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) this.nextSlide();
+            if (endX - startX > 50) this.prevSlide();
+        });
+        
+        // Auto-play
+        setInterval(() => {
+            this.nextSlide();
+        }, 5000);
+    }
+    
+    createDots() {
+        const totalDots = Math.max(1, this.slides.length - this.slidesToShow + 1);
+        this.dotsContainer.innerHTML = '';
+        
+        for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => this.goToSlide(i));
+            this.dotsContainer.appendChild(dot);
+        }
+    }
+    
+    updateDots() {
+        this.createDots();
+        const dots = this.dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentIndex);
+        });
+    }
+    
+    updateCarousel() {
+        const slideWidth = 100 / this.slidesToShow;
+        const translateX = -this.currentIndex * slideWidth;
+        this.track.style.transform = `translateX(${translateX}%)`;
+        
+        const dots = this.dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentIndex);
+        });
+    }
+    
+    nextSlide() {
+        const maxIndex = Math.max(0, this.slides.length - this.slidesToShow);
+        this.currentIndex = this.currentIndex >= maxIndex ? 0 : this.currentIndex + 1;
+        this.updateCarousel();
+    }
+    
+    prevSlide() {
+        const maxIndex = Math.max(0, this.slides.length - this.slidesToShow);
+        this.currentIndex = this.currentIndex <= 0 ? maxIndex : this.currentIndex - 1;
+        this.updateCarousel();
+    }
+    
+    goToSlide(index) {
+        const maxIndex = Math.max(0, this.slides.length - this.slidesToShow);
+        this.currentIndex = Math.min(index, maxIndex);
+        this.updateCarousel();
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    new GalleryCarousel();
+});
+</script>
+
+            <section class="spa-container">
+                <img src="images/top-shape-spa.webp" width="1920" height="248"
+                    class="top-shape-spa" alt="Ragamaya">
+                <div class="d-container">
+                    <div class="row center">
+                        <div class="col-md-5">
+                            <div class="welcome-detail">
+                                <div class="spa-title">
+                                    <h2> Spandini </h2>
+                                    <span>The Mountain Spa </span>
+                                </div>
+
+                                <p>Some say the universe sustains itself in the
+                                    harmonious rhythm it creates. Spandini the
+                                    best
+                                    Spa in Uttarakhand reflects this spirit of
+                                    harmony in
+                                    existence. A living relic from a glorious
+                                    past,
+                                </p>
+
+                                <!-- <a href="#" class="know-more mt-2">Know More <img
+                                    src="images/right-arrow.webp"
+                                    class="right-arrow" alt="Ragamaya"
+                                    width="512" height="512"> </a> -->
+                                <!-- <img src="images/shape5.png" class="shape7"
+                                alt="resorts with private pool in munnar"
+                                width="100" height="100" loading="lazy">
+                            <img src="images/shape5.png" class="shape6"
+                                alt="best munnar resort" width="100"
+                                height="100" loading="lazy"> -->
+                            </div>
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="spa-img">
+                                <img
+                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_25,w_800,h_450,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/spa3_df3vdd"
+                                    width="716" height="482"
+                                    class="img-full"
+                                    style="border-radius: 50px;"
+                                    alt="Ragamaya">
+                                <img src="images/spa-shape.png"
+                                    class="spa-shape"
+                                    alt="Ragamaya" width="318" height="482"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+            </section>
+
+            <section class="restaurant-container">
+                <div class="d-container">
+                    <div class="rest-div">
+                        <img src="images/rest-bg.webp" class="rest-bg"
+                            alt="Ragamaya" width="1323" height="284"
+                            loading="lazy">
+                        <div class="row" style="margin: 0;">
+                            <div class="col-md-15">
+                                <img src="images/r1.webp" width="266"
+                                    height="285"
+                                    class="img-full" alt="munnar 5 star resort">
+                            </div>
+                            <div class="col-md-15">
+                                <img src="images/r2.webp" width="266"
+                                    height="285"
+                                    class="img-full" alt="munnar 5 star resort">
+                            </div>
+                            <div class="col-md-15">
+                                <img src="images/r3.webp" width="266"
+                                    height="285"
+                                    class="img-full" alt="munnar packages">
+                            </div>
+                            <div class="col-md-15">
+                                <img src="images/r4.webp" width="266"
+                                    height="285"
+                                    class="img-full"
+                                    alt="munnar resorts with private pool">
+                            </div>
+                            <div class="col-md-15">
+                                <img src="images/r5.webp" width="266"
+                                    height="285"
+                                    class="img-full"
+                                    alt="kerala munnar resorts">
+                            </div>
+                        </div>
+                        <div class="rest-title">
+                            <h2>Oregano </h2>
+                            <span class="btm">Restaurant </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="review-container">
+                <div class="d-container">
+                    <div class="row">
+                        <!-- <div class="col-md-5 review-div">
+                        <div class="welcome-detail-title2">
+                            <h2
+                                class="main-heading  text-lft-color-w">Reviews</h2>
+                        </div>
+
+                        <div class="owl-carousel owl-theme" id="owl-demo-1">
+                            <div class="item">
+                                <div class="client-item">
+                                    <div class="explore-video">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=SPLjLjQQFO0"
+                                            class="youtube">
+                                            <img
+                                                src="../img.youtube.com/vi/SPLjLjQQFO0/mqdefault.jpg"
+                                                class="img-full" alt="Ragamaya">
+                                            <div class=" playbtn">
+                                                <i
+                                                    class="fa fa-play-circle"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="client-item">
+                                    <div class="explore-video">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=VA5VoxPMywE"
+                                            class="youtube">
+                                            <img
+                                                src="../img.youtube.com/vi/VA5VoxPMywE/mqdefault.jpg"
+                                                class="img-full" alt="Ragamaya">
+                                            <div class=" playbtn">
+                                                <i
+                                                    class="fa fa-play-circle"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                        <a href="gallery.html" class="know-more mt-2">VIEW ALL
+                            REVIEWS <img src="images/right-arrow.webp"
+                                class="right-arrow" alt="Ragamaya" width="512"
+                                height="512" loading="lazy"> </a>
+                        <img src="images/user-shape.png" class="user-shape"
+                            alt="Ragamaya" width="203" height="186"
+                            loading="lazy">
+                    </div> -->
+
+                        <div class="col-md-12 mob-story">
+                            <div class="welcome-detail-title2 mb-0">
+                                <span> Stories of </span>
+
+                                <h3 class="main-heading text-lft-color-w">
+                                    <img
+                                        src="images/shape5.png"
+                                        class="shape5btm"
+                                        alt="Ragamaya" width="100" height="100"
+                                        loading="lazy"> Digantaa</h3>
+                                <p
+                                    style="color:rgb(212, 211, 211);">Founded
+                                    with the vision of blending eco-luxury
+                                    and cultural richness, Digantaa has been
+                                    recognized with Travelers’ Choice Awards for
+                                    consecutive years. Our commitment lies in
+                                    sustainable hospitality while offering an
+                                    unmatched guest experience
+                                </p>
+                            </div>
+                            <img src="images/story-shape.png"
+                                class="story-shape"
+                                alt="Ragamaya" width="200" height="88"
+                                loading="lazy">
+
+                            <style>
+        .story-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-detail-title2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .welcome-detail-title2 span {
+            color: #4DA482;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .main-heading {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin: 20px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .shape5btm {
+            position: absolute;
+            top: -20px;
+            right: -30px;
+            opacity: 0.8;
+        }
+
+        .story-shape {
+            display: block;
+            margin: 30px auto;
+            opacity: 0.7;
+        }
+
+        .story-cards {
+            /* margin-top: 10px; */
+        }
+
+        .story-card {
+            /* background: transparent; */
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); */
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* .story-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: #4DA482;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+            cursor: pointer;
+             background: rgb(206, 250, 225);
+            box-shadow: 0 25px 50px rgba(77, 164, 130, 0.2);
+        } */
+
+        /* .card-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #69bf9e, #3d8b69);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .card-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .story-card:hover .card-icon {
+            transform: rotate(10deg) scale(1.1);
+        } */
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d0d2d3;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .card-description-story {
+            color: #f6f3f3;
+            font-size: 1.24rem;
+            line-height: 1.6;
+        }
+
+        .highlight-text {
+            color: #1d1e1e;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 2.2rem;
+            }
+
+            .story-card {
+                height: auto;
+                padding: 30px 20px;
+                margin-bottom: 20px;
+            }
+
+            .card-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 20px;
+            }
+
+            .card-icon i {
+                font-size: 1.5rem;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-shapes::before,
+        .floating-shapes::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(77, 164, 130, 0.1);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .floating-shapes::before {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-shapes::after {
+            width: 100px;
+            height: 100px;
+            bottom: 15%;
+            right: 5%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+                            <div class="row story-cards">
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="story-card">
+                                        <div class>
+                                            <img src="./images/award.png"
+                                                style="width: 35px; height: 35px;"
+                                                alt>
+                                        </div>
+                                        <h4 class="card-title">Award-winning
+                                            <span
+                                                class="highlight-text">Hospitality</span></h4>
+                                        <p class="card-description-story">
+                                            Recognized with multiple Travelers'
+                                            Choice Awards for delivering
+                                            exceptional
+                                            guest experiences year after year.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="story-card">
+                                        <div class>
+                                            <img src="./images/eco.png"
+                                                style="width: 35px; height: 35px;"
+                                                alt>
+
+                                        </div>
+                                        <h4 class="card-title">Eco-conscious
+                                            Design &
+                                            <span class="highlight-text">
+                                                Practices</span></h4>
+                                        <p class="card-description-story">
+                                            Committed to sustainable tourism
+                                            with
+                                            environmentally responsible design
+                                            and
+                                            green practices throughout our
+                                            operations.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12 col-12">
+                                    <div class="story-card">
+                                        <div class>
+                                            <img src="./images/trusted.png"
+                                                style="width: 35px; height: 35px;"
+                                                alt>
+                                        </div>
+                                        <h4 class="card-title">Trusted by <span
+                                                class="highlight-text">All
+                                                Travelers</span></h4>
+                                        <p class="card-description-story">
+                                            Preferred choice for families,
+                                            honeymooners, and corporate
+                                            travelers
+                                            seeking memorable and authentic
+                                            experiences.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+        // Add intersection observer for card animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize cards with hidden state
+        const cards = document.querySelectorAll('.story-card');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.2}s`;
+            observer.observe(card);
+        });
+
+        // Add hover sound effect (optional)
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+
+                        </div>
+                        <!-- <div class="owl-carousel owl-theme" id="owl-demo-2">
+                            <div class="item">
+                                <div class="fet-wrap">
+                                    <a
+                                        href="https://www.instagram.com/ragamayamunnar/"
+                                        target="_blank">
+                                        <div class="fet-img">
+                                            <img src="images/story1.webp" alt
+                                                class="img-full" alt="Ragamaya"
+                                                width="225" height="300">
+                                            <img src="images/actions.png"
+                                                class="actions" alt="Ragamaya">
+
+                                        </div>
+                                        <div class="fet-txt">Vloggers <img
+                                                src="images/right-arrow.webp"
+                                                class="right-arrow"
+                                                alt="Ragamaya" width="300"
+                                                height="300"> </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="fet-wrap">
+                                    <a
+                                        href="https://www.instagram.com/ragamayamunnar/"
+                                        target="_blank">
+                                        <div class="fet-img">
+                                            <img src="images/story2.webp" alt
+                                                class="img-full" alt="Ragamaya"
+                                                width="225" height="300">
+                                            <img src="images/actions.png"
+                                                class="actions" alt="Ragamaya">
+
+                                        </div>
+                                        <div class="fet-txt">Wedding Photoshoot
+                                            <img src="images/right-arrow.webp"
+                                                class="right-arrow"
+                                                alt="Ragamaya" width="300"
+                                                height="300"> </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="fet-wrap">
+                                    <a
+                                        href="https://www.instagram.com/ragamayamunnar/"
+                                        target="_blank">
+                                        <div class="fet-img">
+                                            <img src="images/story3.webp" alt
+                                                class="img-full" alt="Ragamaya"
+                                                width="225" height="300">
+                                            <img src="images/actions.png"
+                                                class="actions" alt="Ragamaya">
+
+                                        </div>
+                                        <div class="fet-txt">Resort Amenities
+                                            <img src="images/right-arrow.webp"
+                                                class="right-arrow"
+                                                alt="Ragamaya" width="300"
+                                                height="300"> </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="book-container">
+                <div class="d-container">
+                    <div class="row center">
+                        <div class="col-md-12">
+
+                            <section class="icon-container3">
+                                <div class="welcome-detail-title2">
+
+                                    <span
+                                        style="color: #577d71;text-align: center;">Plan
+                                        Your Escape
+                                        to
+                                        Mukteshwar</span>
+                                </div>
+
+                                <div class="top-container">
+                                    <div class="icons-shadow"
+                                        style="background:none;box-shadow: none;">
+                                        <style>
+        
+        .book-txt h2 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .inquiry-form {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            height: 370px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .form-title {
+            color: black;
+            font-size: 1.5rem;
+            font-weight: 600;
+            /* margin-bottom: 25px; */
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+                background: rgb(149 236 154 / 20%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            color: black;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control::placeholder {
+            color: black;
+        }
+        
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(255,255,255,.25);
+            color: black;
+        }
+        
+        .btn-inquiry {
+            background: #577d71;
+            padding: 15px 40px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-inquiry:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+            background: #577d71;
+        }
+        
+        .map-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            height: 370px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .book-txt h2 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            
+            .inquiry-form, .map-container {
+                height: 400px;
+                margin-bottom: 30px;
+                padding: 20px;
+            }
+            
+            .form-control {
+                padding: 12px;
+                font-size: 14px;
+            }
+            
+            .btn-inquiry {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .floating-elements::before,
+        .floating-elements::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-elements::before {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-elements::after {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <!-- Horizontal Transparent Inquiry Form -->
+                                                <div class="inquiry-form">
+                                                    <h3 class="form-title "
+                                                        style="color: #577d71; font-size: 20px;">Book
+                                                        Your Stay</h3>
+                                                    <form id="inquiryForm">
+                                                        <div class="form-group">
+                                                            <input type="text"
+                                                                class="form-control"
+                                                                id="guestName"
+                                                                name="name"
+                                                                placeholder="Your Name"
+                                                                required>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <input type="email"
+                                                                class="form-control"
+                                                                id="guestEmail"
+                                                                name="email"
+                                                                placeholder="Email Address"
+                                                                required>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <input type="tel"
+                                                                class="form-control"
+                                                                id="guestPhone"
+                                                                name="phone"
+                                                                placeholder="Phone Number"
+                                                                required>
+                                                        </div>
+
+                                                        <button type="submit"
+                                                            class="btn-inquiry w-100">
+                                                            Send Inquiry
+                                                        </button>
+                                                    </form>
+
+                                                    <p id="response"></p>
+
+                                                    <script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwuuf-beizXUI_fs2YEGzpBuM7utTvGsTguZ4fh1Jx4Bt7NIaxyf-sWBHhRHfkAkzx6eA/exec"; // replace with your deployed /exec URL
+
+  document.getElementById("inquiryForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new URLSearchParams(new FormData(this)).toString();
+
+    fetch(scriptURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formData
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.result === "success") {
+          document.getElementById("response").innerText =
+            "✅ Inquiry submitted successfully!";
+          this.reset();
+        } else {
+          document.getElementById("response").innerText =
+            "❌ Error: " + (data.error || "unknown");
+        }
+      })
+      .catch(err => {
+        document.getElementById("response").innerText = "❌ Network error!";
+        console.error(err);
+      });
+  });
+</script>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-12">
+                                                <!-- Embedded Map -->
+                                                <div class="map-container">
+                                                    <iframe
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.8771741910087!2d79.6336!3d29.4726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a1c1c1c1c1c1%3A0x1c1c1c1c1c1c1c1c!2sMukteshwar%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1635959592249!5m2!1sen!2sin"
+                                                        allowfullscreen
+                                                        loading="lazy">
+                                                    </iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script
+                                            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+                                        <script>
+        // Form submission handler
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('guestName').value,
+                email: document.getElementById('guestEmail').value,
+                phone: document.getElementById('guestPhone').value
+            };
+            
+            // Validation
+            for (let key in formData) {
+                if (!formData[key]) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Submit animation
+            const submitBtn = document.querySelector('.btn-inquiry');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Thank you! Your inquiry has been sent. We will contact you soon.');
+                document.getElementById('inquiryForm').reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+        
+        // Glassmorphism effect on form focus
+        const formInputs = document.querySelectorAll('.form-control');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="clear"></div>
+
+            <section class="footer-top-wraper">
+                <div class="d-container center"><div class="footer-logo"><img
+                            src="https://assets.simplotel.com/simplotel/image/upload/x_26,y_0,w_107,h_98,r_0,c_crop,q_90/digantaa-resort/sky-logo-footer_pih5bl"
+                            alt="footer-logo">
+                    </div></div>
+                <div class="d-container center">
+                    <div class="footer-content">
+                        <img src="images/call.png" class="ficon" alt="call">
+                        <div class="address">
+                            <a class="flex flex-col items-center justify-center" href="tel:+917579515137">Reservation |
+                                +917579515137</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="footer-content">
+                        <img src="images/map.png" class="ficon"
+                            alt="Thekkady Munnar">
+
+                        <div class="address"> <p>Digantaa Resort - Hotel
+                                Mukteshwar
+                                <br>
+                                Village, Kaul, Dhari, Dhanachuli,<br>
+                                Mukteshwar, Uttarakhand 263132</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-content">
+                        <img src="images/call.png" class="ficon"
+                            alt="email reservation ">
+                        <div class="address"> <a href="mailto:+919151900172" class="flex flex-col items-center justify-center" >
+                                Sales | +919151900172
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-container center">
+                    <div class="mid-wrapper">
+                        <div class="footer-mid-content">
+                            <div class="footer-content-title">Enquiry</div>
+                            <div class="address">
+                                <!--<p><img src="images/call.png" class="micon"> +91 8111 993 948 </p>-->
+                                <a href="mailto:Sales@digantaa.com" class="flex items-center justify-center" ><img
+                                        src="images/mail.png" class="micon"
+                                        alt="Marketing Enquiry">
+                                    Sales@digantaa.com</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="footer-mid-content">
+                            <div class="footer-content-title">24x7 Front Desk
+                            </div>
+                            <div class="address map-icon"> <a class="flex items-center justify-center"
+                                    href="tel:+917579515137"><img
+                                        src="images/call.png" class="micon"
+                                        alt="24x7 Front Desk">+9175795151378</a>
+                            </div>
+                        </div>
+
+                        <div class="footer-mid-content">
+                            <div class="footer-social-links">
+                                <div class="footer-content-title">Social Media
+                                </div>
+                                <ul>
+                                    <li><a
+                                            href="https://www.facebook.com/DigantaaResorts"
+                                            target="_blank"><i
+                                                class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a
+                                            href="https://www.instagram.com/digantaa_resorts/"
+                                            target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <!--<li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i> </a> </li>
+                         <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>-->
+                                    <li><a
+                                            href="https://www.youtube.com/channel/UCLg1EWfW1CXuW4lqvkCBUGw"
+                                            target="_blank"><i
+                                                class="fa-brands fa-youtube"></i></a></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-container center">
+                    <div class="bottom-wrapper">
+                        <div class="footer-quick-links">
+                            <div class="footer-content-title">Quick Links</div>
+                            <ul>
+                                <li><a href="#" class="home">Home</a> </li>
+                                <li><a href="#stay" class="about">Stay</a></li>
+                                <li><a href="#dining"
+                                        class="about">Dining</a></li>
+
+                            </ul>
+                            <ul>
+                                <li><a href="#experience"
+                                        class="about">Experiences</a></li>
+                                <li><a href="#offers"
+                                        class="about">Offers</a></li>
+                                <li><a href="#gallery"
+                                        class="about">Gallery</a></li>
+
+                            </ul>
+                            <ul>
+                                <li><a href="#about"
+                                        class="about">About</a></li>
+                                <li><a href="#contact"
+                                        class="about">Contact</a></li>
+                            </ul>
+                            <!-- <ul>
+                            <li><a href="#" class="spa"> Spandini The spa </a>
+                            </li>
+                            <li><a href="#" class="activities">Activities</a>
+                            </li>
+                            <li><a href="gallery#" class="gallery">Gallery</a>
+                            </li>
+                        </ul> -->
+                            <!-- <ul>
+                            <li><a href="#reviews" class="reviews">Reviews</a>
+                            </li>
+                            <li><a href="#contacts" class="contact">Contact
+                                    Us</a> </li>
+                        </ul> -->
+
+                        </div>
+
+                        <div class="footer-cottage-links">
+                            <div class="footer-content-title">Accommodation
+                            </div>
+                            <ul>
+                                <li><a href="#">Raga Lake View Rooms </a></li>
+                                <li><a href="#">Ponmudi Grand Suite </a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Aranya Leela </a></li>
+                                <li><a href="#">Aranya Maya </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0">
+    
+    <!-- Copyright -->
+    <div class="text-gray-600 text-md">
+      &copy; 2025. <span>All rights reserved</span>
+    </div>
+
+    <!-- Designed By -->
+    <div class="text-gray-600 text-sm">
+      <p>
+        Design by :
+        <a href="http://www.squareit.in/"
+           target="_blank"
+           title="www.squareit.in"
+           class="text-green-600 hover:text-green-700 font-medium transition-colors duration-200">
+          www.squareit.in
+        </a>
+      </p>
+    </div>
+
+  </div>
+            </section>
+            <script src="js/jquery.min.js"></script>
+
+            <script src="menu/jquery.sexy-menu.min.js"></script>
+            <script>
+        var d = jQuery.noConflict();
+        d(function () {
+            d('#sexy-menu').sexymenu({});
+        });
+    </script>
+            <script src="js/all.js"></script>
+
+            <div id="button"></div> <!-- End back-to-top Component-->
+
+            <!--     main     -->
+            <script src="js/main.js"></script>
+
+            <script src="js/bootstrap.min.js"></script>
+
+            <script src="OwlCarousel2/owl.carousel.min.js"></script>
+            <!-- Magnific Popup core JS file -->
+
+            <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                // tabcontent[i].style.opacity = "0";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            // document.getElementById(cityName).style.opacity = "1";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+            <script>
+        $(document).ready(function () {
+            $('.youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+
+                fixedContentPos: false
+            });
+        });
+
+    </script>
+            <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+
+            <!-- <script>
+        var $tabs = $('#wheel-tab li');
+        $('#wheel-left').on('click', function () {
+            var prevLen = $tabs.filter('.active').prev('li').length;
+            if (prevLen)
+                $tabs.filter('.active').prev('li').find('a[data-toggle="tab"]').tab('show');
+            else
+                $tabs.filter('li:last').find('a[data-toggle="tab"]').tab('show');
+        });
+
+        $('#wheel-right').on('click', function () {
+            var nextLen = $tabs.filter('.active').next('li').length;
+            if (nextLen)
+                $tabs.filter('.active').next('li').find('a[data-toggle="tab"]').tab('show');
+            else
+                $tabs.filter('li:first').find('a[data-toggle="tab"]').tab('show');
+
+        });
+    </script> -->
+        </body>
+
+        <!-- Mirrored from www.ragamayamunnar.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Sep 2025 11:07:50 GMT -->
+    </html>

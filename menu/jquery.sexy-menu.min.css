@@ -1,0 +1,24 @@
+.sexy-menu { position: fixed;top: 0;left: 0;right: 0; height: 30%;transition: all 0s ease-out;z-index:10;background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.55), rgba(0,0,0,0.5),  rgba(0,0,0,0.45), rgba(0,0,0,0.4), rgba(0,0,0,0.35), rgba(0,0,0,0.3), rgba(0,0,0,0.25), rgba(0,0,0,0.2), rgba(0,0,0,0.15), rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.025), rgba(0,0,0,0.017), rgba(0,0,0,0.0075), rgba(0,0,0,0.0005) );
+}
+ .sexy-menu.detached {margin-top: -140px;opacity: 0;filter: alpha(opacity=0); height: auto; }
+ .sexy-menu.visible {margin-top:0px;opacity: 1;filter: alpha(opacity=1); }
+ .sexy-menu.detached .nav > li{ padding-top:0.6em; padding-bottom:0.6em; color:#1b4d8c;}
+ .sexy-menu.detached .menu-container{ padding-top:0.5em; padding-bottom:0.5em; margin-top:0em;}
+  .sexy-menu.detached .logo-container{ padding-top:5px; padding-bottom:5px;}
+   .sexy-menu.detached .nav li ul {margin-top:5px;}
+   .sexy-menu.detached .top-header .top-container{ padding-top:0px;}
+   
+   .sexy-menu.detached .top-quickwraper{ display:none}
+   .sexy-menu.detached  .nav-brand img{     
+    width: 83%; }
+.nav > li a{ color:#333;}
+		  .sexy-menu .top-header .top-container .top-container .navigation nav-header .logo .large{ display: block}
+.sexy-menu .small{ display:none}
+.sexy-menu .detached .small{ display: block}
+.sexy-menu .detached .top-header .top-container .top-container .navigation nav-header .logo .large{ display: none}
+
+		  
+
+
+
+
