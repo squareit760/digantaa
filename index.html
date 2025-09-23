@@ -759,312 +759,49 @@ form.addEventListener('submit', function(event) {
 
                             </p>
 
-                            <style>
-
-
-.cottage-highlights-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title {
-    font-size: 42px;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-.cottages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    align-items: start;
-}
-
-/* Large screen - all cards in one row */
-@media (min-width: 1200px) {
-    .cottages-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
-/* Tablet - 2 per row */
-@media (min-width: 768px) and (max-width: 1199px) {
-    .cottages-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Small screen - 1 per row */
-@media (max-width: 767px) {
-    .cottages-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.cottage-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: transparent; /* transparent background */
-    border-radius: 20px;
-    padding: 15px 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border: 2px solid #b6e2a1; /* light pista border */
-    opacity: 0;
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-.cottage-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-    border-color: #91d18b; /* darker pista green */
-    background: transparent; /* stays transparent */
-}
-
-/* Icon */
-.cottage-icon {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(145, 209, 139, 0.35); /* soft pista glow */
-    transition: all 0.4s ease;
-}
-
-.cottage-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-/* Pista overlay */
-.cottage-icon::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(145, 209, 139, 0.25),
-        rgba(145, 209, 139, 0.05)
-    );
-    opacity: 0.6;
-    transition: opacity 0.4s ease;
-    border-radius: inherit;
-    pointer-events: none;
-}
-
-/* Hover effects */
-.cottage-card:hover .cottage-icon {
-    box-shadow: 0 12px 35px rgba(145, 209, 139, 0.55);
-    transform: scale(1.05);
-}
-
-.cottage-card:hover .cottage-icon img {
-    transform: scale(1.2);
-}
-
-.cottage-card:hover .cottage-icon::after {
-    opacity: 0.8;
-}
-
-/* Title */
-.cottage-title {
-    font-size: 26px;
-    font-weight: bold;
-    color: #91d18b; /* pista green */
-    text-align: center;
-    transition: color 0.3s ease;
-}
-.cottage-card:hover .cottage-title {
-    color: #6ab46b; /* darker pista */
-}
-
-/* Description */
-.cottage-description {
-    font-size: 16px;
-    color: #34495e;
-    line-height: 1.7;
-    transition: color 0.3s ease;
-}
-.cottage-card:hover .cottage-description {
-    color: #2c3e50;
-}
-
-/* Tags */
-.cottage-features {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-.feature-tag {
-    background: #b6e2a1; /* pista green */
-    color: white;
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 12px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-.cottage-card:hover .feature-tag {
-    background: #91d18b;
-    color: white;
-    transform: translateY(-2px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .cottage-highlights-section {
-        padding: 40px 15px;
-    }
-    .section-title {
-        font-size: 32px;
-    }
-    .cottage-card {
-        padding: 30px 25px;
-    }
-    .cottage-icon {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 20px;
-    }
-    .cottage-title {
-        font-size: 22px;
-    }
-    .cottage-description {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .cottage-highlights-section {
-        padding: 30px 10px;
-    }
-    .section-title {
-        font-size: 28px;
-    }
-    .cottage-card {
-        padding: 25px 20px;
-        border-radius: 15px;
-    }
-    .cottage-icon {
-        width: 60px;
-        height: 60px;
-    }
-    .cottage-title {
-        font-size: 20px;
-    }
-    .cottage-description {
-        font-size: 14px;
-    }
-    .feature-tag {
-        font-size: 11px;
-        padding: 4px 10px;
-    }
-}
-
-/* Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.section-header {
-    animation: fadeInUp 0.8s ease forwards;
-}
-.cottage-card:nth-child(1) { animation-delay: 0.1s; }
-.cottage-card:nth-child(2) { animation-delay: 0.2s; }
-.cottage-card:nth-child(3) { animation-delay: 0.3s; }
-        </style>
-
-                            <div class="cottage-highlights-section">
-                                <div class="cottages-grid">
-                                    <div class="cottage-card cottage-1"
-                                        data-cottage="tesia">
-                                        <div class="cottage-icon">
-                                            <img
-                                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_W6A9536"
-                                                alt="Tesia Cottage"
-                                                loading="lazy">
-                                        </div>
-                                        <h3 class="cottage-title">Tesia
-                                            Cottage</h3>
-                                        <div class="cottage-features">
-                                            <span class="feature-tag">Cozy
-                                                Wooden Interiors</span>
-                                            <span class="feature-tag">Private
-                                                Balcony</span>
-                                            <span class="feature-tag">Nature
-                                                Views</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="cottage-card cottage-2"
-                                        data-cottage="yuhina"
-                                        onclick="handleCottageClick('yuhina')">
-                                        <div class="cottage-icon">
-                                            <img
-                                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3164/x_0,y_176,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/Yuhina_cottage_avmnyp"
-                                                alt="Yuhina Cottage"
-                                                loading="lazy">
-                                        </div>
-                                        <h3 class="cottage-title">Yuhina
-                                            Cottage</h3>
-
-                                        <div class="cottage-features">
-                                            <span class="feature-tag">Spacious
-                                                Living</span>
-                                            <span
-                                                class="feature-tag">Valley-Facing
-                                                Windows</span>
-                                            <span class="feature-tag">Premium
-                                                Amenities</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="cottage-card cottage-3"
-                                        data-cottage="whistler"
-                                        onclick="handleCottageClick('whistler')">
-                                        <div class="cottage-icon">
-                                            <img
-                                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3337/x_0,y_262,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5070_roicqd"
-                                                alt="Whistler Cottage"
-                                                loading="lazy">
-                                        </div>
-                                        <h3 class="cottage-title">Whistler
-                                            Cottage</h3>
-                                        <div class="cottage-features">
-                                            <span
-                                                class="feature-tag">Family-Friendly</span>
-                                            <span class="feature-tag">Designed
-                                                With Rustic
-                                                Elegance.</span>
-                                        </div>
-                                    </div>
-                                </div>
+                             <div class="act-lists">
+                <div class="row center" style="flex-wrap: wrap; align-items: baseline;">
+                    <div class="col-md-4">
+                        <div class="act-item">
+                            <div class="act-img">
+                                <img src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_W6A9536" alt="" class="img-full" alt="boating at munnar">
+                                <img src="images/act-shape.png" class="act-shape" alt="Pedal through  Ponmudi Lake  ">
                             </div>
+                            <div class="act-txt">
+                                <h2> Tesia Cottage</h2>
+                                <p>Spread across an area of 280 sq. ft., Tesia Cottages are elegant accommodations featuring a host of amenities and cosy bedding for a wonderful stay!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="act-item">
+                            <div class="act-img">
+                                <img src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3164/x_0,y_176,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/Yuhina_cottage_avmnyp"  class="img-full" alt="Local Community Excursion">
+                                <img src="images/act-shape.png" class="act-shape" alt="Local Community munnar">
+                            </div>
+                            <div class="act-txt">
+                                <h2> Yuhina Cottage   </h2>
+                                <p>The Yuhina Cottages at Digantaa Resort are spread across an area of 380 sq. ft., and come equipped with modern facilities and beautiful interiors for a pleasant stay in Nainital.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="act-item">
+                            <div class="act-img">
+                                <img src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3337/x_0,y_262,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5070_roicqd" alt="" class="img-full" alt="Trekking  in munnar">
+                                <img src="images/act-shape.png" class="act-shape" alt="trekking">
+                            </div>
+                            <div class="act-txt">
+                                <h2> Myna Cottages    </h2>
+                                <p>Our Myna Cottages are 600 sq. ft. stylish accommodations that offer comfortable bedding and classy interiors for a memorable time!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
                             <!-- <a href="about.html" class="know-more">Request a
                                 Rate <img src="images/right-arrow-blue.webp"
