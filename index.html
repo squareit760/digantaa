@@ -698,7 +698,7 @@
                                 }
                             </style>
 
-                              <script>
+                                <script>
 const scriptURL1 = "https://script.google.com/macros/s/AKfycbwg85Ek00f39z5Un4zGO8Cje8_yDWyJLvO_V_bQ-gizOLklNndpf70WqCB1_sMbQ9tixw/exec";
 
 const form = document.getElementById('quickInquiryForm');
@@ -737,8 +737,6 @@ form.addEventListener('submit', function(event) {
   });
 });
 </script>
-
-
 
                                 <!-- end horizontal form -->
                                 <img src="images/abt-shape.png"
@@ -1007,7 +1005,7 @@ form.addEventListener('submit', function(event) {
                                         data-cottage="tesia">
                                         <div class="cottage-icon">
                                             <img
-                                                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_W6A9536"
                                                 alt="Tesia Cottage"
                                                 loading="lazy">
                                         </div>
@@ -1028,7 +1026,7 @@ form.addEventListener('submit', function(event) {
                                         onclick="handleCottageClick('yuhina')">
                                         <div class="cottage-icon">
                                             <img
-                                                src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3164/x_0,y_176,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/Yuhina_cottage_avmnyp"
                                                 alt="Yuhina Cottage"
                                                 loading="lazy">
                                         </div>
@@ -1051,7 +1049,7 @@ form.addEventListener('submit', function(event) {
                                         onclick="handleCottageClick('whistler')">
                                         <div class="cottage-icon">
                                             <img
-                                                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3337/x_0,y_262,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5070_roicqd"
                                                 alt="Whistler Cottage"
                                                 loading="lazy">
                                         </div>
@@ -3056,56 +3054,257 @@ document.addEventListener('DOMContentLoaded', () => {
             <section class="spa-container">
                 <img src="images/top-shape-spa.webp" width="1920" height="248"
                     class="top-shape-spa" alt="Ragamaya">
-                <div class="d-container">
-                    <div class="row center">
-                        <div class="col-md-5">
-                            <div class="welcome-detail">
-                                <div class="spa-title">
-                                    <h2> Spandini </h2>
-                                    <span>The Mountain Spa </span>
-                                </div>
+                <style>
+    :root{
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0ea5a4;
+      --shadow: 0 10px 30px rgba(2,6,23,0.08);
+      --radius:14px;
+    }
 
-                                <p>Some say the universe sustains itself in the
-                                    harmonious rhythm it creates. Spandini the
-                                    best
-                                    Spa in Uttarakhand reflects this spirit of
-                                    harmony in
-                                    existence. A living relic from a glorious
-                                    past,
-                                </p>
+    .testimonial-area{max-width:860px; margin:0 auto}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .section-title h2{font-size:20px;margin:0}
 
-                                <!-- <a href="#" class="know-more mt-2">Know More <img
-                                    src="images/right-arrow.webp"
-                                    class="right-arrow" alt="Ragamaya"
-                                    width="512" height="512"> </a> -->
-                                <!-- <img src="images/shape5.png" class="shape7"
-                                alt="resorts with private pool in munnar"
-                                width="100" height="100" loading="lazy">
-                            <img src="images/shape5.png" class="shape6"
-                                alt="best munnar resort" width="100"
-                                height="100" loading="lazy"> -->
-                            </div>
-                        </div>
+    /* Slider frame */
+    .slider{
+      position:relative;
+      background:transparent;
+      border-radius:var(--radius);
+      padding:26px;
+    }
 
-                        <div class="col-md-7">
-                            <div class="spa-img">
-                                <img
-                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_25,w_800,h_450,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/spa3_df3vdd"
-                                    width="716" height="482"
-                                    class="img-full"
-                                    style="border-radius: 50px;"
-                                    alt="Ragamaya">
-                                <img src="images/spa-shape.png"
-                                    class="spa-shape"
-                                    alt="Ragamaya" width="318" height="482"
-                                    loading="lazy">
-                            </div>
-                        </div>
+    .viewport{
+      overflow:hidden;
+      border-radius:12px;
+    }
 
+    .track{
+      display:flex;
+      transition:transform 420ms cubic-bezier(.2,.9,.2,1);
+      will-change:transform;
+      gap:18px;
+      padding:18px;
+    }
+
+    .slide{
+      min-width:100%; /* one slide visible */
+      flex:0 0 100%;
+      display:flex;
+      justify-content:center;
+    }
+
+    .card{
+      width:100%;
+      max-width:720px;
+      background:var(--card);
+      border-radius:12px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+    }
+
+    .avatar{
+      width:72px;height:72px;border-radius:12px;flex:0 0 72px;overflow:hidden;background:linear-gradient(135deg,#e6f6f6,#eef9fb);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)
+    }
+    .content{flex:1}
+    .quote{font-size:16px;line-height:1.5;margin:4px 0 12px;color:#0f172a}
+    .who{font-weight:600}
+    .meta{font-size:13px;color:var(--muted);margin-top:6px}
+
+    /* Controls */
+    .controls{position:absolute;right:12px;top:12px;display:flex;gap:8px}
+    .btn{
+      width:42px;height:42px;border-radius:10px;border:0;background:rgba(255,255,255,0.9);box-shadow:var(--shadow);display:grid;place-items:center;cursor:pointer;
+    }
+    .btn:active{transform:translateY(1px)}
+
+    .dots{display:flex;gap:8px;margin-top:16px;justify-content:center}
+    .dot{width:10px;height:10px;border-radius:999px;background:#d1d5db;cursor:pointer}
+    .dot.active {
+  background: #0ea5a4 !important;
+}
+
+    /* Responsive */
+    @media (max-width:640px){body{padding:18px}.card{padding:16px} .avatar{width:56px;height:56px;flex:0 0 56px}}
+
+  </style>
+                <main class="testimonial-area" aria-label="Testimonials">
+                    <div class="welcome-detail-title2">
+
+                        <span>What our customers say</span>
                     </div>
 
-                    <div class="clear"></div>
-                </div>
+                    <section class="slider" aria-roledescription="carousel">
+                        <div class="viewport">
+                            <div class="track" id="track">
+                                <!-- Slides -->
+                                <div class="slide" role="group"
+                                    aria-roledescription="slide"
+                                    aria-label="1 of 5">
+                                    <article class="card">
+                                        <div class="avatar"
+                                            aria-hidden="true">SJ</div>
+                                        <div class="content">
+                                            <div
+                                                class="quote">"We switched to their service last year and our productivity increased dramatically. The team is responsive, professional and the quality is consistent."</div>
+                                            <div class="who">Sarah Johnson</div>
+                                            <div class="meta">Marketing Director
+                                                • TechFlow
+                                                Inc.</div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="slide" role="group"
+                                    aria-roledescription="slide"
+                                    aria-label="2 of 5">
+                                    <article class="card">
+                                        <div class="avatar"
+                                            aria-hidden="true">RD</div>
+                                        <div class="content">
+                                            <div
+                                                class="quote">"Fantastic experience from start to finish. The team's attention to detail and follow-through is top notch."</div>
+                                            <div class="who">Ravi Desai</div>
+                                            <div class="meta">Founder •
+                                                BrightLeaf</div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="slide" role="group"
+                                    aria-roledescription="slide"
+                                    aria-label="3 of 5">
+                                    <article class="card">
+                                        <div class="avatar"
+                                            aria-hidden="true">MK</div>
+                                        <div class="content">
+                                            <div
+                                                class="quote">"The product is intuitive and reliable. Support responds fast — saved us many hours of headaches."</div>
+                                            <div class="who">Maya Kapoor</div>
+                                            <div class="meta">Product Manager •
+                                                Nova
+                                                Insights</div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="slide" role="group"
+                                    aria-roledescription="slide"
+                                    aria-label="4 of 5">
+                                    <article class="card">
+                                        <div class="avatar"
+                                            aria-hidden="true">AT</div>
+                                        <div class="content">
+                                            <div
+                                                class="quote">"Excellent value and a team who truly cares. Recommended for any business wanting reliable results."</div>
+                                            <div class="who">Amit Trivedi</div>
+                                            <div class="meta">Operations Head •
+                                                Triveni
+                                                Logistics</div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="slide" role="group"
+                                    aria-roledescription="slide"
+                                    aria-label="5 of 5">
+                                    <article class="card">
+                                        <div class="avatar"
+                                            aria-hidden="true">LP</div>
+                                        <div class="content">
+                                            <div
+                                                class="quote">"Their creativity and execution helped launch our campaign with outstanding results. We're thrilled with the ROI."</div>
+                                            <div class="who">Lina Perez</div>
+                                            <div class="meta">CMO •
+                                                CrestaWorks</div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="controls">
+                            <button class="btn" id="prevBtn-testimonials"
+                                aria-label="Previous testimonial">&#9664;</button>
+                            <button class="btn" id="nextBtn-testimonials"
+                                aria-label="Next testimonial">&#9654;</button>
+                        </div>
+
+                        <!-- Dots -->
+                        <div class="dots" id="dots-testimonials"></div>
+
+                        <!-- <div class="dots" id="dots" aria-hidden="false"></div> -->
+                    </section>
+
+                </main>
+
+                <script>
+(function(){
+  const track = document.getElementById('track');
+  const slides = Array.from(track.children);
+  const prevBtn = document.getElementById('prevBtn-testimonials');
+  const nextBtn = document.getElementById('nextBtn-testimonials');
+
+  let current = 0;
+  const total = slides.length;
+
+  function update() {
+    const x = -current * 100;
+    track.style.transform = `translateX(${x}%)`;
+    slides.forEach((s, i) => {
+      s.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      s.querySelector('[role="group"]').setAttribute('aria-label', (i + 1) + ' of ' + total);
+    });
+  }
+
+  function prev() {
+    current = (current - 1 + total) % total;
+    update();
+  }
+
+  function next() {
+    current = (current + 1) % total;
+    update();
+  }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+
+  // Keyboard support
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // Touch/swipe support
+  let startX = 0; let deltaX = 0;
+  track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; });
+  track.addEventListener('touchmove', (e) => { deltaX = e.touches[0].clientX - startX; });
+  track.addEventListener('touchend', () => {
+    if (Math.abs(deltaX) > 40) {
+      if (deltaX < 0) next();
+      else prev();
+    }
+    startX = 0; deltaX = 0;
+  });
+
+  // Autoplay
+  let autoplay = setInterval(next, 5000);
+  track.addEventListener('mouseenter', () => clearInterval(autoplay));
+  track.addEventListener('mouseleave', () => autoplay = setInterval(next, 5000));
+
+  update();
+})();
+</script>
+
+
             </section>
 
             <section class="restaurant-container">
@@ -3843,7 +4042,6 @@ form1.addEventListener("submit", function (e) {
   });
 });
 </script>
-
 
                                                 </div>
                                             </div>
