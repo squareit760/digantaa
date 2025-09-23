@@ -3106,8 +3106,8 @@ img.bottom-img {
 }
 .icon-container {
     position: relative;
-    margin-top: -30px;
-    padding: 50px 0 0;
+    margin-top: -128px;
+    padding: 0 0 50px 0;
     overflow: hidden;
     background-image: url(../images/icon-bg.html);
     background-size: cover;
