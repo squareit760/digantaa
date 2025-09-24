@@ -242,8 +242,17 @@ audio, ::selection {
 }
 .img-full {
     width: 100%;
-    height: auto;
-    display: block 
+    height: 49vh;
+    display: block;
+    object-fit: cover;
+}
+
+.resta .img-full{
+    
+    width: 100%;
+    height: 26vh;
+    display: block;
+    object-fit: cover;
 }
 .img-responsive {
     max-width: 100%;
@@ -1519,15 +1528,13 @@ a.button {
     display: relative;
 }
 .submit-btn1 {
-    border: none;
-    background-image: url(../images/apply-bg.html);
-    background-size: cover;
-    color: #000;
+    color: #fff;
     font-weight: 600;
     padding: 5px 20px;
     font-family: 'Montserrat';
     font-size: 1em;
     text-transform: uppercase;
+    background: black;
 }
 .submit-btn1:hover {
     background: #1a1a1a 
@@ -2427,9 +2434,9 @@ img.abt-shape {
     display: block;
 }
 .welcome-detail-title2 span {
-    font-size: 0.833em;
+    font-size: 1em;
     line-height: 40px;
-    font-weight: normal;
+    font-weight: bold;
     font-family: 'BarokahSignature';
     color: #000;
     font-style: normal;
@@ -3449,20 +3456,21 @@ img.shape5 {
 }
 .rest-title h2 {
     font-weight: normal;
-    font-size: 3.206em;
+    font-size: 2.206em;
     font-family: 'Canela';
-    line-height: 70px;
+    /* line-height: 70px; */
     color: #fff;
     text-align: center;
     letter-spacing: 1px;
 }
 .rest-title span.btm {
+    /* padding: 2px 8px; */
     font-weight: normal;
     text-align: center;
-    font-size: 1.294em;
+    font-size: 0.884em;
     font-family: 'BarokahSignature';
     color: #fff;
-    line-height: 60px;
+    /* line-height: 60px; */
 }
 .icon-content2 h4 {
     font-weight: 600;
@@ -6868,7 +6876,7 @@ input.enquiry-box-txt:-moz-placeholder {
     .luxury-container {
         /* padding: 114px 0 530px;
         margin-top: 164px; */
-        height: 60vh;
+        height: 70vh;
         padding: 65px 0 395px;
         margin-top: 20px;
         width: 100%;
