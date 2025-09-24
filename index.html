@@ -363,7 +363,7 @@
 
     <body class="home">
         <!-- Floating Call & WhatsApp Buttons (Icons Only) -->
-<style>
+        <style>
   .floating-contact {
     position: fixed;
     left: 16px;
@@ -439,13 +439,13 @@
   }
 </style>
 
-<div class="floating-contact">
-  <!-- Call button -->
-  <a class="call" href="tel:+91759515137
+        <div class="floating-contact">
+            <!-- Call button -->
+            <a class="call" href="tel:+91759515137
                             " title="Call Now">
-    <!-- Phone SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 
+                <!-- Phone SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 
                19.79 19.79 0 0 1-8.63-3.07 
                19.5 19.5 0 0 1-6-6 
                19.79 19.79 0 0 1-3.07-8.63 
@@ -455,17 +455,17 @@
                a16 16 0 0 0 6 6l1.55-1.55
                a2 2 0 0 1 2.11-.45c1.13.36 
                2.32.6 3.53.72A2 2 0 0 1 
-               22 16.92z"/>
-    </svg>
-  </a>
-  <span class="pulse"></span>
+               22 16.92z" />
+                </svg>
+            </a>
+            <span class="pulse"></span>
 
-  <!-- WhatsApp button -->
-  <a class="whatsapp" href="https://wa.me/+91759515137" 
-     target="_blank" rel="noopener" title="Chat on WhatsApp">
-    <!-- WhatsApp SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-      <path d="M16.027 3C9.379 3 4 8.383 4 15.027c0 2.658.789 
+            <!-- WhatsApp button -->
+            <a class="whatsapp" href="https://wa.me/+91759515137"
+                target="_blank" rel="noopener" title="Chat on WhatsApp">
+                <!-- WhatsApp SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path d="M16.027 3C9.379 3 4 8.383 4 15.027c0 2.658.789 
                5.145 2.156 7.234L4 29l6.934-2.102A11.924 11.924 
                0 0 0 16.027 27C22.672 27 28 21.617 28 14.973 
                28 8.328 22.672 3 16.027 3zm0 21.813c-2.16 
@@ -476,11 +476,11 @@
                1.051-1.035 1.266c-.191.215-.383.242-.707.082-.324-.164-1.371-.504-2.609-1.602-.961-.859-1.609-1.918-1.801-2.242-.191-.324-.02-.5.145-.664.148-.145.324-.375.484-.559.16-.184.215-.312.324-.516.109-.215.055-.402-.027-.559-.082-.164-.734-1.77-1.004-2.422-.262-.629-.527-.543-.734-.551-.188-.008-.402-.008-.617-.008s-.562.082-.855.402c-.293.324-1.121 
                1.094-1.121 2.668s1.148 3.094 1.309 3.309c.16.215 2.262 
                3.453 5.477 4.844.766.332 1.363.531 1.828.68.77.246 
-               1.469.211 2.02.129.617-.094 1.918-.781 2.191-1.539.27-.762.27-1.418.191-1.539-.082-.129-.297-.207-.621-.371z"/>
-    </svg>
-  </a>
-  <span class="pulse"></span>
-</div>
+               1.469.211 2.02.129.617-.094 1.918-.781 2.191-1.539.27-.762.27-1.418.191-1.539-.082-.129-.297-.207-.621-.371z" />
+                </svg>
+            </a>
+            <span class="pulse"></span>
+        </div>
 
         <nav
             class="fixed top-0 left-0 right-0 bg-black shadow-sm border-b border-gray-100"
@@ -602,25 +602,25 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group">
-                                <input type="text" placeholder="Name"
+                                <input type="text" placeholder="Name*"
                                     name="name" required>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group">
-                                <input type="text" placeholder="Contact No."
+                                <input type="text" placeholder="Contact No.*"
                                     name="phone" required>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group">
-                                <input type="text" placeholder="Email "
+                                <input type="text" placeholder="Email* "
                                     name="email" required>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group">
-                                <textarea placeholder="Comment" rows="3"
+                                <textarea placeholder="Message" rows="3"
                                     name="comment"></textarea>
                             </div>
                         </div>
@@ -719,7 +719,7 @@
                     @media (max-width:480px){
                         .cloud-text-res{
                             font-size: 10px;
-                            max-width: 45%;
+                            max-width: 75%;
                             text-align: center;
                         }
                     }
@@ -770,9 +770,9 @@
                                     <form class="horizontal-form "
                                         id="quickInquiryForm">
                                         <input type="text" name="name"
-                                            placeholder="Name" required>
+                                            placeholder="Name*" required>
                                         <input type="tel" name="phone"
-                                            placeholder="Phone" required>
+                                            placeholder="Phone*" required>
                                         <button type="submit">SUBMIT</button>
                                     </form>
                                 </div>
@@ -802,7 +802,7 @@
                                     padding: 12px 16px;
                                     border: 2px solid #4da281;
                                     border-radius: 8px;
-                                    font-size: 1rem;
+                                    font-size: 1.3rem;
                                     background: transparent;
                                     color: #222;
                                     outline: none;
@@ -960,7 +960,7 @@
                                         <div class="act-item">
                                             <div class="act-img">
                                                 <img
-                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_W6A9536"
+                                                    src="./images/lux-1.webp"
                                                     alt class="img-full"
                                                     alt="boating at munnar">
                                                 <img src="images/act-shape.png"
@@ -982,7 +982,7 @@
                                         <div class="act-item">
                                             <div class="act-img">
                                                 <img
-                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3164/x_0,y_176,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/Yuhina_cottage_avmnyp"
+                                                    src="./images/lux-2.webp"
                                                     class="img-full"
                                                     alt="Local Community Excursion">
                                                 <img src="images/act-shape.png"
@@ -1004,7 +1004,7 @@
                                         <div class="act-item">
                                             <div class="act-img">
                                                 <img
-                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3337/x_0,y_262,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5070_roicqd"
+                                                    src="./images/lux-3.webp"
                                                     alt class="img-full"
                                                     alt="Trekking  in munnar">
                                                 <img src="images/act-shape.png"
@@ -1031,7 +1031,7 @@
                                         <div class="act-item">
                                             <div class="act-img">
                                                 <img
-                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3440/x_0,y_314,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC4987_l55cnw"
+                                                    src="./images/lux-4.webp"
                                                     class="img-full"
                                                     alt="Local Community Excursion">
                                                 <img src="images/act-shape.png"
@@ -1055,7 +1055,7 @@
                                         <div class="act-item">
                                             <div class="act-img">
                                                 <img
-                                                    src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_2651/x_144,y_0,w_4712,h_2651,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/_DSC5523_stitch_tuvhjf"
+                                                    src="./images/lux-5.webp"
                                                     alt class="img-full"
                                                     alt="Trekking  in munnar">
                                                 <img src="images/act-shape.png"
@@ -1185,18 +1185,19 @@
 
                 </div>
 
-                <div class="d-container" style>
+                <div class="d-container">
                     <div class="row abt-con">
-                        <div class="col-md-8 pl-0">
-                            <div class="rest-img">
+                        <div class="col-md-8 order-1 order-md-1">
+                            <div class="rest-img" style="overflow: hidden;">
                                 <img
-                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_26,w_800,h_480,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/g19_ts1g1w"
+                                    src="./images/restra-1.avif"
                                     class="img-full"
+                                    style="border-radius: 15px;"
                                     alt="Fine dining restaurant at Ragamaya Spa &amp; Resort in Munnar">
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 order-2 order-md-2 text-center">
                             <div class="welcome-detail">
                                 <div class="welcome-detail-title2">
 
@@ -1230,7 +1231,7 @@
 
                     </div>
                     <div class="row" style="margin-top: 30px;">
-                        <div class="col-md-4">
+                        <div class="col-md-4 order-2 order-md-2 text-center">
                             <div class="welcome-detail">
                                 <div class="welcome-detail-title2">
 
@@ -1261,11 +1262,12 @@
 
                             </div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 order-1 order-md-1">
                             <div class="rest-img">
                                 <img
-                                    src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1026,h_684,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/digantaa-resort/DSC_5927_fgnrgd"
+                                    src="./images/restra-2.avif"
                                     class="img-full"
+                                    style="border-radius: 15px;"
                                     alt="Fine dining restaurant at Ragamaya Spa &amp; Resort in Munnar">
                             </div>
                         </div>
@@ -1554,7 +1556,7 @@
                         data-experience="bonfire">
                         <div class="card-icon">
                             <img
-                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/digantaa-resort/Digantaa_Resort_-_Shiva_Idol_in_a_temple_with_offerings_next_to_it_uvvlnc"
+                                src="./images/temple.webp"
                                 alt="Bonfire Nights" loading="lazy">
                         </div>
                         <h3 class="card-title">Mukteshwar Temple</h3>
@@ -1566,7 +1568,7 @@
                     <div class="experience-card card-1" data-experience="spa">
                         <div class="card-icon">
                             <img
-                                src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_124,w_3974,h_2236,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/digantaa-resort/Digantaa_Resort_-_Waterfall_leading_to_a_pond_around_trees_rmqanj"
+                                src="./images/waterfall.webp"
                                 alt="Spa & Sauna" loading="lazy">
                         </div>
                         <h3 class="card-title">Majestic Waterfalls
@@ -1582,7 +1584,7 @@
                         data-experience="adventure">
                         <div class="card-icon">
                             <img
-                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/digantaa-resort/arun-kashyap-E7C077ex-Zk-unsplash_gteewl"
+                                src="./images/adventure.webp"
                                 alt="Outdoor Adventures"
                                 loading="lazy">
                         </div>
@@ -1676,7 +1678,7 @@
                     <div class="relax-card">
                         <div class="relax-img">
                             <img
-                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3346/x_27,y_0,w_4973,h_3346,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/digantaa-resort/_DSC5158_spbuss"
+                                src="./images/ayurvedaSpa.webp"
                                 alt="Ayurvedic Spa">
                             <div class="relax-overlay"></div>
                             <h3 class="relax-label">Ayurvedic Spa</h3>
@@ -1692,7 +1694,7 @@
                     <div class="relax-card">
                         <div class="relax-img">
                             <img
-                                src="https://assets.simplotel.com/simplotel/image/upload/x_252,y_0,w_666,h_500,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/digantaa-resort/sauna_cnlsrz"
+                                src="./images/sauna.avif"
                                 alt="Sauna Experience">
                             <div class="relax-overlay"></div>
                             <h3 class="relax-label">Sauna Experience</h3>
@@ -1708,7 +1710,7 @@
                     <div class="relax-card">
                         <div class="relax-img">
                             <img
-                                src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3332/x_54,y_18,w_4946,h_3314,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/digantaa-resort/_DSC5431_eyinhe"
+                                src="./images/swimmingPool.webp"
                                 alt="Swimming Pool">
                             <div class="relax-overlay"></div>
                             <h3 class="relax-label">Swimming Pool</h3>
@@ -1938,7 +1940,7 @@ h2 {
             <div class="circle-cards">
                 <div class="circle-card">
                     <img
-                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600"
+                        src="./images/hiking_1.webp"
                         alt="Hiking">
                     <div class="circle-content">
                         <h3>Hiking & Trekking</h3>
@@ -1949,7 +1951,7 @@ h2 {
 
                 <div class="circle-card">
                     <img
-                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600"
+                        src="./images/river_crafting.jpg"
                         alt="River Rafting">
                     <div class="circle-content">
                         <h3>River Rafting</h3>
@@ -1971,7 +1973,7 @@ h2 {
 
                 <div class="circle-card">
                     <img
-                        src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=600"
+                        src="./images/rock_climb.16_PM(3)"
                         alt="Rock Climbing">
                     <div class="circle-content">
                         <h3>Rock Climbing</h3>
@@ -1982,7 +1984,7 @@ h2 {
 
                 <div class="circle-card">
                     <img
-                        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600"
+                        src="./images/village_walk.jpg"
                         alt="Village Walks">
                     <div class="circle-content">
                         <h3>Village Walks</h3>
@@ -2467,7 +2469,7 @@ h2 {
                                             id="carouselTrack">
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-1.avif"
+                                                    src="./images/gal-1.avif"
                                                     alt="Resort View 1">
                                                 <div class="image-overlay">
                                                     <div
@@ -2480,7 +2482,7 @@ h2 {
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-2.avif"
+                                                    src="./images/gal-2.avif"
                                                     alt="Resort View 2">
                                                 <div class="image-overlay">
                                                     <div
@@ -2494,8 +2496,8 @@ h2 {
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-src="./images/gal-3.avif"
-                                                alt="Resort View 3">
+                                                    src="./images/gal-3.avif"
+                                                    alt="Resort View 3">
                                                 <div class="image-overlay">
                                                     <div
                                                         class="image-title">Fine
@@ -2507,7 +2509,7 @@ src="./images/gal-3.avif"
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-4.avif"
+                                                    src="./images/gal-4.avif"
                                                     alt="Resort View 4">
                                                 <div class="image-overlay">
                                                     <div class="image-title">Spa
@@ -2520,7 +2522,7 @@ src="./images/gal-3.avif"
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-5.avif"
+                                                    src="./images/gal-5.avif"
                                                     alt="Resort View 4">
                                                 <div class="image-overlay">
                                                     <div class="image-title">Spa
@@ -2533,7 +2535,7 @@ src="./images/gal-3.avif"
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-6.avif"
+                                                    src="./images/gal-6.avif"
                                                     alt="Resort View 4">
                                                 <div class="image-overlay">
                                                     <div class="image-title">Spa
@@ -2546,7 +2548,7 @@ src="./images/gal-3.avif"
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-8.webp"
+                                                    src="./images/gal-8.webp"
                                                     alt="Resort View 4">
                                                 <div class="image-overlay">
                                                     <div class="image-title">Spa
@@ -2559,7 +2561,7 @@ src="./images/gal-3.avif"
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-7.avif"
+                                                    src="./images/gal-7.avif"
                                                     alt="Resort View 4">
                                                 <div class="image-overlay">
                                                     <div class="image-title">Spa
@@ -2572,20 +2574,7 @@ src="./images/gal-3.avif"
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-9.webp"
-                                                alt="Resort View 4">
-                                                <div class="image-overlay">
-                                                    <div class="image-title">Spa
-                                                        &
-                                                        Wellness</div>
-                                                    <div
-                                                        class="image-description">Rejuvenate
-                                                        your mind and body</div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-slide">
-                                                <img
-                                                src="./images/gal-10.webp"
+                                                    src="./images/gal-9.webp"
                                                     alt="Resort View 4">
                                                 <div class="image-overlay">
                                                     <div class="image-title">Spa
@@ -2598,7 +2587,20 @@ src="./images/gal-3.avif"
                                             </div>
                                             <div class="carousel-slide">
                                                 <img
-                                                src="./images/gal-11.webp"
+                                                    src="./images/gal-10.webp"
+                                                    alt="Resort View 4">
+                                                <div class="image-overlay">
+                                                    <div class="image-title">Spa
+                                                        &
+                                                        Wellness</div>
+                                                    <div
+                                                        class="image-description">Rejuvenate
+                                                        your mind and body</div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img
+                                                    src="./images/gal-11.webp"
                                                     alt="Resort View 4">
                                                 <div class="image-overlay">
                                                     <div class="image-title">Spa
@@ -2893,7 +2895,7 @@ src="./images/gal-3.avif"
             /* Responsive */
             @media (max-width:640px) {
                 body {
-                    padding: 18px
+                    padding: 18px 0px;
                 }
 
                 .card {
@@ -3114,30 +3116,28 @@ src="./images/gal-3.avif"
                                     </div>
                                     <div class="col-md-15 resta">
                                         <img
-                                        src="./images/restra-banner-2.webp"
+                                            src="./images/restra-banner-2.webp"
                                             width="266" height="285"
                                             class="img-full"
                                             alt="munnar 5 star resort">
                                     </div>
                                     <div class="col-md-15 resta bg-black/30">
                                         <img
-                                        src="./images/restra-banner-3.webp"
+                                            src="./images/restra-banner-3.webp"
                                             width="266" height="285"
                                             class="img-full"
                                             alt="munnar packages">
                                     </div>
                                     <div class="col-md-15 resta">
                                         <img
-                                                                                src="./images/restra-banner-4.webp"
-
+                                            src="./images/restra-banner-4.webp"
                                             width="266" height="285"
                                             class="img-full"
                                             alt="munnar resorts with private pool">
                                     </div>
                                     <div class="col-md-15 resta">
                                         <img
-                                                                                src="./images/restra-banner-5.avif"
-
+                                            src="./images/restra-banner-5.avif"
                                             width="266" height="285"
                                             class="img-full"
                                             alt="kerala munnar resorts">
@@ -3588,10 +3588,10 @@ src="./images/gal-3.avif"
                                                 Mukteshwar</span>
                                         </div>
 
-                                        <div class="">
+                                        <div class>
                                             <div class="icons-shadow"
                                                 style="background:none;box-shadow: none;">
-                                <style>
+                                                <style>
                                     .book-txt h2 {
                                         color: white;
                                         font-size: 2.5rem;
@@ -3708,6 +3708,7 @@ src="./images/gal-3.avif"
         width: 100% !important;
         height: 300px; /* fixed height for good visibility */
     }
+    
 }
 
 
@@ -3755,6 +3756,7 @@ src="./images/gal-3.avif"
                                             transform: translateY(-20px);
                                         }
                                     }
+
                                    
                                 </style>
                                                 <div class="row">
@@ -3776,7 +3778,7 @@ src="./images/gal-3.avif"
                                                                         class="form-control"
                                                                         id="guestName"
                                                                         name="name"
-                                                                        placeholder="Your Name"
+                                                                        placeholder="Your Name*"
                                                                         required>
                                                                 </div>
 
@@ -3787,7 +3789,7 @@ src="./images/gal-3.avif"
                                                                         class="form-control"
                                                                         id="guestEmail"
                                                                         name="email"
-                                                                        placeholder="Email Address"
+                                                                        placeholder="Email Address*"
                                                                         required>
                                                                 </div>
 
@@ -3797,8 +3799,8 @@ src="./images/gal-3.avif"
                                                                         type="tel"
                                                                         class="form-control"
                                                                         id="guestPhone"
-                                                                        name="phone"
-                                                                        placeholder="Phone Number"
+                                                                        name="phone*"
+                                                                        placeholder="Phone Number*"
                                                                         required>
                                                                 </div>
 
@@ -3948,14 +3950,26 @@ src="./images/gal-3.avif"
                             <div class="footer-logo"><img
                                     src="https://assets.simplotel.com/simplotel/image/upload/x_26,y_0,w_107,h_98,r_0,c_crop,q_90/digantaa-resort/sky-logo-footer_pih5bl"
                                     alt="footer-logo">
-                                   
+
                             </div>
-                             <div style="max-width: 50%;text-align:center; margin-bottom: 20px;">
-                               <p> Luxury resort in Mukteshwar offering
-                                        comfortable
-                                        stays and memorable experiences amidst
-                                        picturesque hills.</p>
-                                    </div>
+                            <style>
+                                .footer-logo-cont{
+                                    max-width: 50%;
+                                    text-align:center;
+                                     margin-bottom: 20px;
+                                }
+                                @media (max-width: 480px){
+                                    .footer-logo-cont{
+                                        max-width: 100%;
+                                    }
+                                }
+                            </style>
+                            <div class="footer-logo-cont">
+                                <p> Luxury resort in Mukteshwar offering
+                                    comfortable
+                                    stays and memorable experiences amidst
+                                    picturesque hills.</p>
+                            </div>
                         </div>
                         <div class="d-container center">
                             <div class="footer-content">
@@ -4061,24 +4075,29 @@ src="./images/gal-3.avif"
                                         </li>
                                         <li><a href="#stay"
                                                 class="about">Stay</a></li>
-                                        <li><a href="#dining"
-                                                class="about">Dining</a></li>
+                                        <li><a href="#amenities"
+                                                class="about">Amenities</a></li>
 
                                     </ul>
                                     <ul>
+                                        <li><a href="#dining"
+                                                class="home">Dining</a>
+                                        </li>
                                         <li><a href="#experience"
                                                 class="about">Experiences</a></li>
-                                        <li><a href="#offers"
-                                                class="about">Offers</a></li>
-                                        <li><a href="#gallery"
-                                                class="about">Gallery</a></li>
+                                        <li><a href="#rejuvenation"
+                                                class="about">Rejuvenation</a></li>
 
                                     </ul>
+
                                     <ul>
-                                        <li><a href="#about"
-                                                class="about">About</a></li>
-                                        <li><a href="#contact"
-                                                class="about">Contact</a></li>
+                                        <li><a href="#activities"
+                                                class="about">Activities</a></li>
+                                        <li><a href="#gallery"
+                                                class="about">Gallery</a></li>
+                                        <li><a href="#offers"
+                                                class="about">Offers</a></li>
+
                                     </ul>
 
                                 </div>

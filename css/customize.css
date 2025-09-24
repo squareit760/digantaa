@@ -2733,6 +2733,7 @@ img.banner-bg1 {
     font-family: 'Canela';
     font-style: normal;
     margin-top: 5px;
+    color: #59d388;
 }
 .act-item {
     position: relative;
@@ -7184,7 +7185,7 @@ input.enquiry-box-txt:-moz-placeholder {
     }
 }
 @media (max-width: 768px) {
-    img.facshape, .fshape3, .fshape2, .fshape1, .rest-img, .rest-side, img.dining-shape2, img.dining-shape1, img.dining-shape4, .rest-img2, .rest-side2 {
+    img.facshape, .fshape3, .fshape2, .fshape1, .rest-side, img.dining-shape2, img.dining-shape1, img.dining-shape4, .rest-img2, .rest-side2 {
         display: none;
     }
     .dine-top {
