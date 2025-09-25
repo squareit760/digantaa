@@ -3121,11 +3121,12 @@ img.bottom-img {
     background-size: cover;
 }
 .icon-list {
+    display: flex;
     align-items: center;
     text-align: center;
     position: relative;
     z-index: 9;
-    display: flex;
+    /* gap:4px; */
 }
 .top-list {
     margin-bottom: 20px;
@@ -5598,8 +5599,9 @@ input.enquiry-box-txt:-moz-placeholder {
         padding: 80px 0px 
     }
     .icon-img img {
-        width: 60px;
-        height: auto;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
     }
     .fet-wrap.big-fc img {
         height: 405px;
@@ -5928,7 +5930,7 @@ input.enquiry-box-txt:-moz-placeholder {
         margin-bottom: 10px;
     }
     .icon-content h4 {
-        font-size: .9em;
+        font-size: 0.9em;
     }
     .welcome-img1, .welcome-img2 {
         padding: 10px;
@@ -7362,6 +7364,7 @@ input.enquiry-box-txt:-moz-placeholder {
         position: fixed;
     }
     .banner-wraper-home {
+        margin-top: 88px;
         width: 100%;
         height: auto;
         overflow: hidden;
@@ -7941,8 +7944,9 @@ input.enquiry-box-txt:-moz-placeholder {
         width: 20% 
     }
     .icon-img img {
-        width: 60px;
-        height: auto;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
     }
     .mid-wrapper .footer-mid-content {
         min-height: unset;
@@ -8289,9 +8293,14 @@ input.enquiry-box-txt:-moz-placeholder {
         padding: 20px 0 0 
     }
     .icon-content h4 {
-        font-size: .9em;
+        font-size: 0.9em;
         text-align: left;
+        max-width: 70px;
         line-height: 20px;
+    }
+    .icon-list {
+        display: flex;
+        gap:10px;
     }
     .icon-container .col-md-3 {
         width: 50%;
@@ -8511,8 +8520,9 @@ input.enquiry-box-txt:-moz-placeholder {
         width: 35% 
     }
     .icon-img img {
-        width: 60px;
-        height: auto;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
     }
     .review-container {
         padding-top: 205px;

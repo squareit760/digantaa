@@ -60,11 +60,29 @@
 
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    }
+
+    // Close menu when any navigation link is clicked
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a[href]');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                toggleMobileMenu();
+            });
+        });
+    });
+</script>
+        <!-- <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
-    </script>
+    </script> -->
         <style>
         .cottage-highlights-section {
             max-width: 1200px;
@@ -540,7 +558,7 @@
                             class="text-white font-semibold text-xl hover:text-green-600 transition-colors duration-200">HOME</a>
                         <a href="#stay"
                             class="text-white font-semibold text-xl hover:text-green-500 transition-colors duration-200">STAY</a>
-                        <a href="#amenities"
+                        <a href="#amenities2"
                             class="text-white font-semibold text-xl hover:text-green-500 transition-colors duration-200">AMENITIES</a>
                         <a href="#dining"
                             class="text-white font-semibold text-xl hover:text-green-500 transition-colors duration-200">DINING</a>
@@ -593,7 +611,7 @@
                         class="block text-green-500 font-semibold text-md py-2">HOME</a>
                     <a href="#stay"
                         class="block text-gray-700 font-semibold text-md py-2 hover:text-green-500">STAY</a>
-                    <a href="#amenities"
+                    <a href="#amenities2"
                         class="block text-gray-700 font-semibold text-md py-2 hover:text-green-500">AMENITIES</a>
                     <a href="#dining"
                         class="block text-gray-700 font-semibold text-md py-2 hover:text-green-500">DINING</a>
@@ -976,14 +994,15 @@
                                 Gaad Waterfalls.
 
                             </p>
-                            <div class="welcome-detail-title2" id="amenities"
-                                style="margin-bottom: 20px;margin-top:20px">
-                                <span>Luxurious Accommodations </span>
-                            </div>
+                            
 
                             <!-- <a href="" >Discover More</a> -->
 
                             <div class="act-lists">
+                                <div class="welcome-detail-title2"
+                                style="margin-bottom: 20px;margin-top:20px">
+                                <span>Luxurious Accommodations </span>
+                            </div>
                                 <div class="row center"
                                     style="flex-wrap: wrap; align-items: baseline;">
                                     <div class="col-md-4">
@@ -1104,7 +1123,17 @@
                                 </div>
 
                             </div>
-
+                            <style>
+                                @media (max-width: 480px){
+                                    .amen{
+                                        display: none;
+                                    }
+                                }
+                            </style>
+                            <div class="welcome-detail-title2 amen " id="amenities1"
+                                style="margin-bottom: 20px;margin-top:20px">
+                                <span>Amenities </span>
+                            </div>
                             
 
                         </div>
@@ -1125,61 +1154,110 @@
 
             <!-- Accomodation Picturesque -->
 
-            <section class="icon-container">
+           
+
+            <section class="icon-container" id="amenities2"
                 <div class="d-container">
                     <div class="welcome-detail-title2" style="margin-bottom: 20px;">
-                        <span> Culinary Delights </span>
+                        <span> Amenities </span>
                     </div>
+
+                    <style>
+                        @media (max-width:480px){
+                            #amenities2 > .row{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding-left: 0;
+                                padding-right: 0;
+                            } 
+                        }
+                    </style>
+                     
+                    
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <div class="icon-list">
                                 <div class="icon-img">
-                                    <img src="images/icon1.png"
-                                        alt="" width="60"
-                                        height="60"
+                                    <img src="images/rss.png"
+                                        alt="" width="45"
+                                        height="40"
                                         loading="lazy">
                                 </div>
                                 <div class="icon-content">
-                                    <h4>Best Deals </h4>
+                                    <h4>Complimentary Wi-Fi</h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+
+                        <div class="col-md-2">
                             <div class="icon-list">
                                 <div class="icon-img">
-                                    <img src="images/icon2.png"
+                                    <img src="images/swimming.png"
                                         alt="" width="60"
                                         height="60"
                                         loading="lazy">
                                 </div>
                                 <div class="icon-content">
-                                    <h4>Free Wifi</h4>
+                                    <h4>Swimming Pool</h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+
+                        
+
+                        <div class="col-md-2">
                             <div class="icon-list">
                                 <div class="icon-img">
-                                    <img src="images/icon3.png"
-                                        alt="" width="60"
-                                        height="60"
+                                    <img src="images/towel.png"
+                                        alt="" width="50"
+                                        height="50"
                                         loading="lazy">
                                 </div>
                                 <div class="icon-content">
-                                    <h4>Free Cancellation</h4>
+                                    <h4>Spa & Sauna</h4>
 
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <div class="icon-list">
                                 <div class="icon-img">
-                                    <img src="images/icon4.png" alt=""
-                                        width="60" height="60" loading="lazy">
+                                    <img src="images/breakfast.png" alt=""
+                                        width="60" height="70" loading="lazy">
                                 </div>
                                 <div class="icon-content">
-                                    <h4>Best Price Guarantee</h4>
+                                    <h4>Complimentary Breakfast</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="icon-list">
+                                <div class="icon-img">
+                                    <img src="images/mountain.png"
+                                        alt="" width="50"
+                                        height="60"
+                                        loading="lazy">
+                                </div>
+                                <div class="icon-content">
+                                    <h4>Mountain Views</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="icon-list">
+                                <div class="icon-img">
+                                    <img src="images/bicyle.png"
+                                        alt="" width="50"
+                                        height="40"
+                                        loading="lazy">
+                                </div>
+                                <div class="icon-content">
+                                    <h4>Indoor Cycling</h4>
+
                                 </div>
                             </div>
                         </div>
@@ -1547,7 +1625,6 @@
             .welcome-detail-title2 span {
                     font-size: 10px;
                     line-height: 3;
-                    color: #4DA482;
                     text-align: center;
                     /* font-weight: 500; */
                     /* letter-spacing: 1px; */
@@ -2614,401 +2691,484 @@ h2 {
                 <img src="images/top-shape-spa.webp" width="1920" height="248"
                     class="top-shape-spa">
                 <style>
-            :root {
-                --bg: #f7f9fb;
-                --card: #ffffff;
-                --muted: #6b7280;
-                --accent: #0ea5a4;
-                --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
-                --radius: 14px;
-            }
+        :root {
+            --bg: #f7f9fb;
+            --card: #ffffff;
+            --muted: #6b7280;
+            --accent: #0ea5a4;
+            --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+            --radius: 14px;
+        }
 
-            .testimonial-area {
-                max-width: 860px;
-                margin: 0 auto
-            }
+        .testimonial-area {
+            max-width: 860px;
+            margin: 0 auto;
+        }
 
-            .section-title {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 18px
-            }
+        .welcome-detail-title2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-            .section-title h2 {
-                font-size: 20px;
-                margin: 0
-            }
+        
 
-            /* Slider frame */
+        /* Slider frame */
+        .slider {
+            position: relative;
+            background: transparent;
+            border-radius: var(--radius);
+            padding: 26px;
+            overflow: hidden; /* Prevent any overflow */
+        }
+
+        .viewport {
+            overflow: hidden;
+            border-radius: 12px;
+            width: 100%; /* Ensure full width */
+        }
+
+        .track {
+            display: flex;
+            transition: transform 420ms cubic-bezier(.2, .9, .2, 1);
+            will-change: transform;
+            width: 100%; /* Ensure track takes full width */
+        }
+
+        .slide {
+            min-width: 100%; /* Each slide takes exactly 100% width */
+            width: 100%;
+            flex: 0 0 100%; /* Prevent flexbox from shrinking slides */
+            display: flex;
+            justify-content: center;
+            padding: 0 10px; /* Small padding for card spacing */
+        }
+
+        .card {
+            width: 100%;
+            max-width: 720px;
+            background: var(--card);
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+
+        .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 12px;
+            flex: 0 0 72px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #e6f6f6, #eef9fb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 18px;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .quote {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 4px 0 12px;
+            color: #0f172a;
+        }
+
+        .who {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            border: 0;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: var(--shadow);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .dots {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            justify-content: center;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot:hover {
+            background: #9ca3af;
+        }
+
+        .dot.active {
+            background: var(--accent) !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
             .slider {
-                position: relative;
-                background: transparent;
-                border-radius: var(--radius);
-                padding: 26px;
+                padding: 20px 16px;
             }
-
-            .viewport {
-                overflow: hidden;
-                border-radius: 12px;
-            }
-
-            .track {
-                display: flex;
-                transition: transform 420ms cubic-bezier(.2, .9, .2, 1);
-                will-change: transform;
-                gap: 18px;
-                padding: 18px;
-            }
-
+            
             .slide {
-                min-width: 100%;
-                /* one slide visible */
-                flex: 0 0 100%;
-                display: flex;
-                justify-content: center;
+                padding: 0 5px;
             }
-
+            
             .card {
-                width: 100%;
-                max-width: 720px;
-                background: var(--card);
-                border-radius: 12px;
-                padding: 22px;
-                box-shadow: var(--shadow);
-                display: flex;
-                gap: 18px;
-                align-items: flex-start;
+                padding: 18px;
+                gap: 14px;
             }
 
             .avatar {
-                width: 72px;
-                height: 72px;
-                border-radius: 12px;
-                flex: 0 0 72px;
-                overflow: hidden;
-                background: linear-gradient(135deg, #e6f6f6, #eef9fb);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: 700;
-                color: var(--accent)
-            }
-
-            .content {
-                flex: 1
+                width: 60px;
+                height: 60px;
+                flex: 0 0 60px;
+                font-size: 16px;
             }
 
             .quote {
-                font-size: 16px;
-                line-height: 1.5;
-                margin: 4px 0 12px;
-                color: #0f172a
+                font-size: 15px;
             }
 
-            .who {
-                font-weight: 600
-            }
-
-            .meta {
-                font-size: 13px;
-                color: var(--muted);
-                margin-top: 6px
-            }
-
-            /* Controls */
             .controls {
-                position: absolute;
-                right: 12px;
-                top: 12px;
-                display: flex;
-                gap: 8px
+                right: 8px;
+                top: 8px;
             }
 
             .btn {
-                width: 42px;
-                height: 42px;
-                border-radius: 10px;
-                border: 0;
-                background: rgba(255, 255, 255, 0.9);
-                box-shadow: var(--shadow);
-                display: grid;
-                place-items: center;
-                cursor: pointer;
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
             }
 
-            .btn:active {
-                transform: translateY(1px)
+            .slider {
+                padding: 15px 10px;
             }
 
-            .dots {
-                display: flex;
-                gap: 8px;
-                margin-top: 16px;
-                justify-content: center
+            .card {
+                padding: 16px;
+                gap: 12px;
             }
 
-            .dot {
-                width: 10px;
-                height: 10px;
-                border-radius: 999px;
-                background: #d1d5db;
-                cursor: pointer
+            .avatar {
+                width: 56px;
+                height: 56px;
+                flex: 0 0 56px;
+                font-size: 14px;
             }
 
-            .dot.active {
-                background: #0ea5a4 !important;
+            .quote {
+                font-size: 14px;
+                line-height: 1.4;
             }
 
-            /* Responsive */
-            @media (max-width:640px) {
-                body {
-                    padding: 18px 0px;
-                }
-
-                .card {
-                    padding: 16px
-                }
-
-                .avatar {
-                    width: 56px;
-                    height: 56px;
-                    flex: 0 0 56px
-                }
+            .who {
+                font-size: 14px;
             }
-                </style>
+
+            .controls {
+                right: 6px;
+                top: 6px;
+                gap: 6px;
+            }
+
+            .btn {
+                width: 36px;
+                height: 36px;
+                font-size: 12px;
+            }
+        }
+    </style>
                 <main class="testimonial-area" aria-label="Testimonials">
-                    <div class="welcome-detail-title2">
+        <div class="welcome-detail-title2">
+            <span>What our customers say</span>
+        </div>
 
-                        <span>What our customers say</span>
+        <section class="slider" aria-roledescription="carousel">
+            <div class="viewport">
+                <div class="track" id="track">
+                    <!-- Slide 1 -->
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 8">
+                        <article class="card">
+                            <div class="avatar" aria-hidden="true">GG</div>
+                            <div class="content">
+                                <div class="quote">"The hotel is located at a prime spot, making travel super convenient. Comfortable beds, delicious food, and a peaceful atmosphere made our stay absolutely perfect."</div>
+                                <div class="who">Gorakh Gupta</div>
+                            </div>
+                        </article>
                     </div>
 
-                    <section class="slider" aria-roledescription="carousel">
-                        <div class="viewport">
-                            <div class="track" id="track">
-                                <!-- Slides -->
-                                <div class="slide" role="group"
-                                    aria-roledescription="slide"
-                                    aria-label="1 of 8">
-                                    <article class="card">
-                                        <div class="avatar"
-                                            aria-hidden="true">GG</div>
-                                        <div class="content">
-                                            <div class="quote">"“The hotel is
-                                                located at a prime spot, making
-                                                travel super convenient.
-                                                Comfortable beds, delicious
-                                                food, and a peaceful atmosphere
-                                                made our stay absolutely
-                                                perfect.”
-                                                "</div>
-                                            <div class="who">Gorakh Gupta</div>
+                    <!-- Slide 2 -->
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 8">
+                        <article class="card">
+                            <div class="avatar" aria-hidden="true">SR</div>
+                            <div class="content">
+                                <div class="quote">"It was a trip with friends… we enjoyed our stay. Good food, good view and peaceful ambience. Lots of activities for children. Even though it was almost full, the staff was attentive and the stay was very pleasant."</div>
+                                <div class="who">Sunita Singh</div>
+                            </div>
+                        </article>
+                    </div>
 
-                                        </div>
-                                    </article>
-                                </div>
+                    <!-- Slide 3 -->
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 8">
+                        <article class="card">
+                            <div class="avatar" aria-hidden="true">K</div>
+                            <div class="content">
+                                <div class="quote">"The staff were super helpful and my room was spotless every day. Spacious, clean, and stylish rooms with amazing views. Excellent service all around."</div>
+                                <div class="who">Khushi</div>
+                            </div>
+                        </article>
+                    </div>
 
-                                <div class="slide" role="group"
-                                    aria-roledescription="slide"
-                                    aria-label="2 of 8">
-                                    <article class="card">
-                                        <div class="avatar"
-                                            aria-hidden="true">SR</div>
-                                        <div class="content">
-                                            <div class="quote"> “It was a trip
-                                                with friends… we enjoyed our
-                                                stay. Good food, good view and
-                                                peaceful ambience. Lots of
-                                                activities for children. Even
-                                                though it was almost full, the
-                                                staff was attentive and the stay
-                                                was very pleasant.”</div>
-                                            <div class="who">Sunita Singh</div>
+                    <!-- Slide 4 -->
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 8">
+                        <article class="card">
+                            <div class="avatar" aria-hidden="true">RS</div>
+                            <div class="content">
+                                <div class="quote">"Awesome experience — really amazing. My best wishes to the entire Digantaa Resort team."</div>
+                                <div class="who">Rajiv Saxena</div>
+                            </div>
+                        </article>
+                    </div>
 
-                                        </div>
-                                    </article>
-                                </div>
+                    <!-- Slide 5 -->
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="5 of 8">
+                        <article class="card">
+                            <div class="avatar" aria-hidden="true">AK</div>
+                            <div class="content">
+                                <div class="quote">"Excellent food and service! Hospitable staff and decent rooms with all amenities. Great value for money."</div>
+                                <div class="who">Aparna Khanna</div>
+                            </div>
+                        </article>
+                    </div>
 
-                                <div class="slide" role="group"
-                                    aria-roledescription="slide"
-                                    aria-label="3 of 8">
-                                    <article class="card">
-                                        <div class="avatar"
-                                            aria-hidden="true">K</div>
-                                        <div class="content">
-                                            <div class="quote">“The staff were
-                                                super helpful and my room was
-                                                spotless every day. Spacious,
-                                                clean, and stylish rooms with
-                                                amazing views. Excellent service
-                                                all around.”
-                                            </div>
-                                            <div class="who">Khushi</div>
+                    <!-- Slide 6 -->
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="6 of 8">
+                        <article class="card">
+                            <div class="avatar" aria-hidden="true">MK</div>
+                            <div class="content">
+                                <div class="quote">"My first experience in the mountains — amazing to see the morning views. The service was very good. Special thanks to Khushi for her hospitality."</div>
+                                <div class="who">Manisha Kumari</div>
+                            </div>
+                        </article>
+                    </div>
 
-                                        </article>
-                                    </div>
+                    <!-- Slide 7 -->
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="7 of 8">
+                        <article class="card">
+                            <div class="avatar" aria-hidden="true">PG</div>
+                            <div class="content">
+                                <div class="quote">"Had a very relaxed stay. Outstanding property and perfect hospitality. From reception staff to the chef, everyone was wonderful. Spa, greenery and mountains made it perfect."</div>
+                                <div class="who">Palak Gupta</div>
+                            </div>
+                        </article>
+                    </div>
 
-                                    <div class="slide" role="group"
-                                        aria-roledescription="slide"
-                                        aria-label="4 of 8">
-                                        <article class="card">
-                                            <div class="avatar"
-                                                aria-hidden="true">RS</div>
-                                            <div class="content">
-                                                <div class="quote">"“Awesome
-                                                    experience — really amazing.
-                                                    My best wishes to the entire
-                                                    Digantaa Resort team.”
-                                                </div>
-                                                <div class="who">Rajiv
-                                                    Saxena</div>
+                    <!-- Slide 8 -->
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="8 of 8">
+                        <article class="card">
+                            <div class="avatar" aria-hidden="true">RM</div>
+                            <div class="content">
+                                <div class="quote">"Wonderful mountain views. Staff, especially manager Sanjeev ji, was very helpful and friendly. Clean and spacious rooms with very good food quality."</div>
+                                <div class="who">Raj Mangla</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
 
-                                            </div>
-                                        </article>
-                                    </div>
+            <!-- Controls -->
+            <div class="controls">
+                <button class="btn" id="prevBtn-testimonials" aria-label="Previous testimonial">&#9664;</button>
+                <button class="btn" id="nextBtn-testimonials" aria-label="Next testimonial">&#9654;</button>
+            </div>
 
-                                    <div class="slide" role="group"
-                                        aria-roledescription="slide"
-                                        aria-label="5 of 8">
-                                        <article class="card">
-                                            <div class="avatar"
-                                                aria-hidden="true">AK</div>
-                                            <div class="content">
-                                                <div class="quote">“Excellent
-                                                    food and service! Hospitable
-                                                    staff and decent rooms with
-                                                    all amenities. Great value
-                                                    for money.”
-                                                </div>
-                                                <div class="who">Aparna
-                                                    Khanna</div>
+            <!-- Dots -->
+            <div class="dots" id="dots-testimonials"></div>
+        </section>
+    </main>
+    <script>
+        (function() {
+            const track = document.getElementById('track');
+            const slides = Array.from(track.children);
+            const prevBtn = document.getElementById('prevBtn-testimonials');
+            const nextBtn = document.getElementById('nextBtn-testimonials');
+            const dotsContainer = document.getElementById('dots-testimonials');
 
-                                            </article>
-                                        </div>
-                                    <div class="slide" role="group"
-                                        aria-roledescription="slide"
-                                        aria-label="6 of 8">
-                                        <article class="card">
-                                            <div class="avatar"
-                                                aria-hidden="true">MK</div>
-                                            <div class="content">
-                                                <div class="quote">“My first experience in the mountains — amazing to see the morning views. The service was very good. Special thanks to Khushi for her hospitality.”
+            let current = 0;
+            const total = slides.length;
 
-                                                </div>
-                                                <div class="who">Manisha Kumari</div>
-
-                                            </article>
-                                        </div>
-                                    <div class="slide" role="group"
-                                        aria-roledescription="slide"
-                                        aria-label="7 of 8">
-                                        <article class="card">
-                                            <div class="avatar"
-                                                aria-hidden="true">PG</div>
-                                            <div class="content">
-                                                <div class="quote">“Had a very relaxed stay. Outstanding property and perfect hospitality.
-                                                     From reception staff to the chef, everyone was wonderful.
-                                                      Spa, greenery and mountains made it perfect.”
-                                                </div>
-                                                <div class="who">Palak Gupta</div>
-
-                                            </article>
-                                        </div>
-                                    <div class="slide" role="group"
-                                        aria-roledescription="slide"
-                                        aria-label="8 of 8">
-                                        <article class="card">
-                                            <div class="avatar"
-                                                aria-hidden="true">RM</div>
-                                            <div class="content">
-                                                <div class="quote">“Wonderful mountain views. Staff, especially manager Sanjeev ji,
-                                                     was very helpful and friendly.
-                                                     Clean and spacious rooms with very good food quality.”
-                                                </div>
-                                                <div class="who">Raj Mangla</div>
-
-                                            </article>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <!-- Controls -->
-                                <div class="controls">
-                                    <button class="btn"
-                                        id="prevBtn-testimonials"
-                                        aria-label="Previous testimonial">&#9664;</button>
-                                    <button class="btn"
-                                        id="nextBtn-testimonials"
-                                        aria-label="Next testimonial">&#9654;</button>
-                                </div>
-
-                                <!-- Dots -->
-                                <div class="dots" id="dots-testimonials"></div>
-
-                                <!-- <div class="dots" id="dots" aria-hidden="false"></div> -->
-                            </section>
-
-                        </main>
-
-                        <script>
-            (function () {
-                const track = document.getElementById('track');
-                const slides = Array.from(track.children);
-                const prevBtn = document.getElementById('prevBtn-testimonials');
-                const nextBtn = document.getElementById('nextBtn-testimonials');
-
-                let current = 0;
-                const total = slides.length;
-
-                function update() {
-                    const x = -current * 100;
-                    track.style.transform = `translateX(${x}%)`;
-                    slides.forEach((s, i) => {
-                        s.setAttribute('aria-hidden', i === current ? 'false' : 'true');
-                        s.querySelector('[role="group"]').setAttribute('aria-label', (i + 1) + ' of ' + total);
-                    });
+            // Create dots
+            function createDots() {
+                for (let i = 0; i < total; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(i));
+                    dotsContainer.appendChild(dot);
                 }
+            }
 
-                function prev() {
-                    current = (current - 1 + total) % total;
-                    update();
-                }
-
-                function next() {
-                    current = (current + 1) % total;
-                    update();
-                }
-
-                prevBtn.addEventListener('click', prev);
-                nextBtn.addEventListener('click', next);
-
-                // Keyboard support
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') prev();
-                    if (e.key === 'ArrowRight') next();
+            function updateDots() {
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === current);
                 });
+            }
 
-                // Touch/swipe support
-                let startX = 0; let deltaX = 0;
-                track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; });
-                track.addEventListener('touchmove', (e) => { deltaX = e.touches[0].clientX - startX; });
-                track.addEventListener('touchend', () => {
-                    if (Math.abs(deltaX) > 40) {
-                        if (deltaX < 0) next();
-                        else prev();
-                    }
-                    startX = 0; deltaX = 0;
+            function update() {
+                const x = -current * 100;
+                track.style.transform = `translateX(${x}%)`;
+                
+                slides.forEach((slide, i) => {
+                    slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
                 });
+                
+                updateDots();
+            }
 
-                // Autoplay
-                let autoplay = setInterval(next, 5000);
-                track.addEventListener('mouseenter', () => clearInterval(autoplay));
-                track.addEventListener('mouseleave', () => autoplay = setInterval(next, 5000));
-
+            function prev() {
+                current = (current - 1 + total) % total;
                 update();
-            })();
-        </script>
+            }
+
+            function next() {
+                current = (current + 1) % total;
+                update();
+            }
+
+            function goToSlide(index) {
+                current = index;
+                update();
+            }
+
+            // Event listeners
+            prevBtn.addEventListener('click', prev);
+            nextBtn.addEventListener('click', next);
+
+            // Keyboard support
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prev();
+                if (e.key === 'ArrowRight') next();
+            });
+
+            // Touch/swipe support
+            let startX = 0;
+            let deltaX = 0;
+            let isDragging = false;
+
+            track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            });
+
+            track.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                deltaX = e.touches[0].clientX - startX;
+            });
+
+            track.addEventListener('touchend', () => {
+                if (isDragging && Math.abs(deltaX) > 50) {
+                    if (deltaX < 0) next();
+                    else prev();
+                }
+                startX = 0;
+                deltaX = 0;
+                isDragging = false;
+            });
+
+            // Mouse drag support
+            let mouseDown = false;
+            track.addEventListener('mousedown', (e) => {
+                mouseDown = true;
+                startX = e.clientX;
+                track.style.cursor = 'grabbing';
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!mouseDown) return;
+                deltaX = e.clientX - startX;
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (mouseDown && Math.abs(deltaX) > 50) {
+                    if (deltaX < 0) next();
+                    else prev();
+                }
+                mouseDown = false;
+                startX = 0;
+                deltaX = 0;
+                track.style.cursor = 'grab';
+            });
+
+            // Autoplay
+            let autoplay = setInterval(next, 500);
+            
+            track.addEventListener('mouseenter', () => {
+                clearInterval(autoplay);
+                track.style.cursor = 'grab';
+            });
+            
+            track.addEventListener('mouseleave', () => {
+                autoplay = setInterval(next, 5000);
+                track.style.cursor = 'default';
+            });
+
+            // Initialize
+            createDots();
+            update();
+        })();
+    </script>
 
                     </section>
 
@@ -3446,7 +3606,7 @@ h2 {
                                     .inquiry-form {
                                         background: rgba(255, 255, 255, 0.15);
                                         backdrop-filter: blur(10px);
-                                        border: 1px solid rgba(255, 255, 255, 0.2);
+                                        border: 1px solid rgba(31, 31, 31, 0.2);
                                         border-radius: 20px;
                                         padding: 30px;
                                         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -3477,17 +3637,6 @@ h2 {
                                         color: black;
                                         font-size: 16px;
                                         transition: all 0.3s ease;
-                                    }
-
-                                    .form-control::placeholder {
-                                        color: black;
-                                    }
-
-                                    .form-control:focus {
-                                        background: rgba(255, 255, 255, 0.25);
-                                        border-color: rgba(255, 255, 255, 0.5);
-                                        box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, .25);
-                                        color: black;
                                     }
 
                                     .btn-inquiry {
@@ -3531,7 +3680,6 @@ h2 {
     .row {
         display: flex;
         flex-direction: column;
-        align-items: center; /* centers horizontally */
     }
 
     .row > .col-md-6 {
