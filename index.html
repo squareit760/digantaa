@@ -701,50 +701,108 @@
 
             <!-- popup script start -->
             <script>
-    const scriptURL2 = "https://script.google.com/macros/s/AKfycbwg85Ek00f39z5Un4zGO8Cje8_yDWyJLvO_V_bQ-gizOLklNndpf70WqCB1_sMbQ9tixw/exec";
+const scriptURL2 = "https://script.google.com/macros/s/AKfycbwg85Ek00f39z5Un4zGO8Cje8_yDWyJLvO_V_bQ-gizOLklNndpf70WqCB1_sMbQ9tixw/exec";
 
-    const popupForm = document.getElementById('popupCall');
+const popupForm = document.getElementById('popupCall');
+const phoneInput = popupForm.querySelector('input[name="phone"]');
+const emailInput = popupForm.querySelector('input[name="email"]');
 
-    popupForm.addEventListener('submit', function (event) {
-        event.preventDefault();
+// ✅ Helper to create error message under any input
+function createErrorElement(input) {
+    const wrapper = input.closest('.form-group');
+    let error = wrapper.querySelector('.error-text');
+    if (!error) {
+        error = document.createElement('span');
+        error.className = 'error-text';
+        error.style.color = 'red';
+        error.style.fontSize = '0.85rem';
+        error.style.display = 'none';
+        error.style.marginTop = '4px';
+        // error.style.position = 'absolute';
+        // error.style.left = '0';
+        // error.style.bottom = '-32px';
+        // wrapper.style.position = 'relative';
+        error.style.display = 'block';
+        error.style.marginTop = '4px';
+        wrapper.style.position = 'static';
 
-        // Disable the submit button
-        const submitBtn = popupForm.querySelector('input[type="submit"], button[type="submit"]');
-        if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.value = "Submitting..."; // optional text change
-        }
+        wrapper.appendChild(error);
+    }
+    return error;
+}
 
-        const formData = new URLSearchParams(new FormData(popupForm)).toString();
+const phoneError = createErrorElement(phoneInput);
+const emailError = createErrorElement(emailInput);
 
-        fetch(scriptURL2, {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: formData
+popupForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Clear old errors
+    phoneError.style.display = 'none';
+    emailError.style.display = 'none';
+
+    const phone = phoneInput.value.trim();
+    const email = emailInput.value.trim();
+
+    const phonePattern = /^[6-9]\d{9}$/; // 10-digit Indian number
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // simple email regex
+
+    let isValid = true;
+
+    if (!phonePattern.test(phone)) {
+        phoneError.textContent = "Enter a valid mobile number.";
+        phoneError.style.display = 'block';
+        isValid = false;
+    }
+
+    if (!emailPattern.test(email)) {
+        emailError.textContent = "Enter a valid email address.";
+        emailError.style.display = 'block';
+        isValid = false;
+    }
+
+    if (!isValid) return; // stop submission if any invalid
+
+    // Disable the submit button
+    const submitBtn = popupForm.querySelector('input[type="submit"], button[type="submit"]');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.value = "Submitting...";
+    }
+
+    const formData = new URLSearchParams(new FormData(popupForm)).toString();
+
+    fetch(scriptURL2, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData
+    })
+        .then(res => res.text())
+        .then(text => {
+            let result;
+            try {
+                result = JSON.parse(text);
+            } catch {
+                result = { result: "success" };
+            }
+
+            if (result.result === "success") {
+                popupForm.reset();
+            }
+
+            window.location.href = "/thanks.html";
         })
-            .then(res => res.text())
-            .then(text => {
-                let result;
-                try {
-                    result = JSON.parse(text);
-                } catch {
-                    result = { result: "success" }; // fallback if JSON parsing fails
-                }
+        .catch(err => {
+            console.log('Network error: ' + err);
+            window.location.href = "/thanks.html";
+        });
+});
 
-                if (result.result === "success") {
-                    popupForm.reset();
-                }
-
-                // Redirect always
-                window.location.href = "/thanks.html";
-            })
-            .catch(err => {
-                console.log('Network error: ' + err);
-                // Redirect even if network error occurs
-                window.location.href = "/thanks.html";
-            });
-    });
+// 🧠 Optional live clearing of error when user types
+phoneInput.addEventListener("input", () => phoneError.style.display = "none");
+emailInput.addEventListener("input", () => emailError.style.display = "none");
 </script>
+
 
             <!-- popup script end -->
 
@@ -921,57 +979,103 @@
                                     }
 
                                 
-                            </style>
+                                </style>
 
-                                <script>
-    const scriptURL1 = "https://script.google.com/macros/s/AKfycbwg85Ek00f39z5Un4zGO8Cje8_yDWyJLvO_V_bQ-gizOLklNndpf70WqCB1_sMbQ9tixw/exec";
+                               <script>
+const scriptURL1 = "https://script.google.com/macros/s/AKfycbwg85Ek00f39z5Un4zGO8Cje8_yDWyJLvO_V_bQ-gizOLklNndpf70WqCB1_sMbQ9tixw/exec";
 
-    const form = document.getElementById('quickInquiryForm');
+const form = document.getElementById('quickInquiryForm');
+const phoneInput1 = form.querySelector('input[name="phone"]');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+// Wrap phone input inside a relative container (for absolute error positioning)
+const phoneWrapper = document.createElement("div");
+phoneWrapper.style.position = "relative";
+phoneWrapper.style.flex = "1";
+phoneWrapper.style.display = "flex";
+phoneWrapper.style.flexDirection = "column";
+phoneWrapper.style.justifyContent = "center";
 
-        // Disable the submit button
-        const submitBtn = form.querySelector('input[type="submit"], button[type="submit"]');
-        if (submitBtn) {
-            submitBtn.disabled = true;
-            if (submitBtn.tagName.toLowerCase() === "input") {
-                submitBtn.value = "Submitting..."; // for <input type="submit">
-            } else {
-                submitBtn.textContent = "Submitting..."; // for <button>
-            }
+// Insert wrapper before the phone input, then move phone input inside it
+phoneInput1.parentNode.insertBefore(phoneWrapper, phoneInput1);
+phoneWrapper.appendChild(phoneInput1);
+
+// Create error message
+const errorMsg = document.createElement("span");
+errorMsg.style.position = "absolute";
+errorMsg.style.bottom = "-60px";
+errorMsg.style.left = "5px";
+errorMsg.style.color = "red";
+errorMsg.style.fontSize = "0.8rem";
+errorMsg.style.whiteSpace = "nowrap";
+errorMsg.style.display = "none";
+errorMsg.textContent = "";
+phoneWrapper.appendChild(errorMsg);
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Reset previous message
+    errorMsg.textContent = "";
+    errorMsg.style.display = "none";
+
+    const phone = phoneInput1.value.trim();
+    const phonePattern = /^[6-9]\d{9}$/; // Valid 10-digit Indian mobile
+
+    if (!phonePattern.test(phone)) {
+        errorMsg.textContent = "Please enter a valid mobile number.";
+        errorMsg.style.display = "block";
+        phoneInput.focus();
+        return;
+    }
+
+    // Disable the submit button
+    const submitBtn = form.querySelector('input[type="submit"], button[type="submit"]');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        if (submitBtn.tagName.toLowerCase() === "input") {
+            submitBtn.value = "Submitting...";
+        } else {
+            submitBtn.textContent = "Submitting...";
         }
+    }
 
-        const formData = new URLSearchParams(new FormData(form)).toString();
+    const formData = new URLSearchParams(new FormData(form)).toString();
 
-        fetch(scriptURL1, {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: formData
+    fetch(scriptURL1, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData
+    })
+        .then(res => res.text())
+        .then(text => {
+            let result;
+            try {
+                result = JSON.parse(text);
+            } catch {
+                result = { result: "success" };
+            }
+
+            if (result.result === "success") {
+                form.reset();
+            }
+
+            window.location.href = "/thanks.html";
         })
-            .then(res => res.text())
-            .then(text => {
-                let result;
-                try {
-                    result = JSON.parse(text);
-                } catch {
-                    result = { result: "success" }; // fallback if JSON parsing fails
-                }
+        .catch(err => {
+            console.log('Network error: ' + err);
+            window.location.href = "/thanks.html";
+        });
+});
 
-                if (result.result === "success") {
-                    form.reset();
-                }
-
-                // Redirect always
-                window.location.href = "/thanks.html";
-            })
-            .catch(err => {
-                console.log('Network error: ' + err);
-                // Redirect even if network error occurs
-                window.location.href = "/thanks.html";
-            });
-    });
+// Hide error message when user starts typing
+phoneInput.addEventListener("input", () => {
+    errorMsg.style.display = "none";
+});
 </script>
+
+
+
+
 
                                 <!-- end horizontal form -->
                                 <img src="images/abt-shape.png"
@@ -3886,343 +3990,270 @@ window.addEventListener('beforeunload', () => {
                             </div>
 
                             <div class>
-                                <div class="icons-shadow"
-                                    style="background:none;box-shadow: none;">
-                                    <style>
-                                    .book-txt h2 {
-                                        color: white;
-                                        font-size: 2.5rem;
-                                        font-weight: 700;
-                                        text-align: center;
-                                        margin-bottom: 40px;
-                                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-                                    }
+  <div class="icons-shadow" style="background:none;box-shadow: none;">
+    <style>
+      .book-txt h2 {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
 
-                                    .inquiry-form {
-                                        background: rgba(255, 255, 255, 0.15);
-                                        backdrop-filter: blur(10px);
-                                        border: 1px solid rgba(31, 31, 31, 0.2);
-                                        border-radius: 20px;
-                                        padding: 30px;
-                                        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-                                        height: 370px;
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: space-between;
-                                    }
-
-                                    .form-title {
-                                        color: black;
-                                        font-size: 1.5rem;
-                                        font-weight: 600;
-                                        /* margin-bottom: 25px; */
-                                        text-align: center;
-                                        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-                                    }
-
-                                    .form-group {
-                                        margin-bottom: 20px;
-                                    }
-
-                                    .form-control {
-                                        background: rgb(149 236 154 / 20%);
-                                        border: 1px solid rgba(255, 255, 255, 0.3);
-                                        border-radius: 10px;
-                                        padding: 15px;
-                                        color: black;
-                                        font-size: 16px;
-                                        transition: all 0.3s ease;
-                                    }
-
-                                    .btn-inquiry {
-                                        background: #577d71;
-                                        padding: 15px 40px;
-                                        border-radius: 10px;
-                                        color: white;
-                                        font-weight: 600;
-                                        font-size: 16px;
-                                        transition: all 0.3s ease;
-                                        cursor: pointer;
-                                        text-transform: uppercase;
-                                        letter-spacing: 1px;
-                                    }
-
-                                    .btn-inquiry:hover {
-                                        transform: translateY(-3px);
-                                        box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
-                                        background: #577d71;
-                                    }
-
-                                    .map-container {
-                                        background: rgba(255, 255, 255, 0.15);
-                                        backdrop-filter: blur(10px);
-                                        border: 1px solid rgba(255, 255, 255, 0.2);
-                                        border-radius: 20px;
-                                        padding: 20px;
-                                        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-                                        height: 370px;
-                                    }
-
-                                    .map-container iframe {
-                                        width: 100%;
-                                        height: 100%;
-                                        border: none;
-                                        border-radius: 15px;
-                                    }
-
-                                    /* Force form + map stack vertically on small screens */
-@media (max-width: 768px) {
-    .row {
+      .inquiry-form {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(31, 31, 31, 0.2);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        height: 370px;
         display: flex;
         flex-direction: column;
-    }
+        justify-content: space-between;
+      }
 
-    .row > .col-md-6 {
-        width: 100% !important;   /* full width */
-        max-width: 500px;         /* optional: keeps from being too wide */
-        margin: 0 auto 20px auto; /* center + spacing */
-    }
+      .form-title {
+        color: #577d71;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
 
-    .inquiry-form,
-    .map-container {
-        width: 100% !important;
-        margin: 0 auto;
-    }
+      .form-group {
+        margin-bottom: 20px;
+        position: relative;
+      }
 
-    .map-container iframe {
-        width: 100% !important;
-        height: 300px; /* fixed height for good visibility */
-    }
-    
-}
+      .form-control {
+        background: rgb(149 236 154 / 20%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        padding: 15px;
+        color: black;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
 
+      .btn-inquiry {
+        background: #577d71;
+        padding: 15px 40px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        width: 100%;
+      }
 
-                                    .floating-elements {
-                                        position: absolute;
-                                        width: 100%;
-                                        height: 100%;
-                                        overflow: hidden;
-                                        z-index: 1;
-                                    }
+      .btn-inquiry:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+        background: #577d71;
+      }
 
-                                    .floating-elements::before,
-                                    .floating-elements::after {
-                                        content: '';
-                                        position: absolute;
-                                        border-radius: 50%;
-                                        background: rgba(255, 255, 255, 0.1);
-                                        animation: float 6s ease-in-out infinite;
-                                    }
+      .map-container {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        height: 370px;
+      }
 
-                                    .floating-elements::before {
-                                        width: 100px;
-                                        height: 100px;
-                                        top: 20%;
-                                        left: 10%;
-                                        animation-delay: 0s;
-                                    }
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 15px;
+      }
 
-                                    .floating-elements::after {
-                                        width: 150px;
-                                        height: 150px;
-                                        bottom: 20%;
-                                        right: 10%;
-                                        animation-delay: 3s;
-                                    }
-
-                                    @keyframes float {
-
-                                        0%,
-                                        100% {
-                                            transform: translateY(0px);
-                                        }
-
-                                        50% {
-                                            transform: translateY(-20px);
-                                        }
-                                    }
-
-                                   
-                                </style>
-                                    <div class="row">
-                                        <div
-                                            class="col-md-6 col-12">
-                                            <!-- Horizontal Transparent Inquiry Form -->
-                                            <div
-                                                class="inquiry-form">
-                                                <h3
-                                                    class="form-title "
-                                                    style="color: #577d71; font-size: 20px;">Book
-                                                    Your Stay</h3>
-                                                <form
-                                                    id="inquiryForm">
-                                                    <div
-                                                        class="form-group">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="guestName"
-                                                            name="name"
-                                                            placeholder="Your Name*"
-                                                            required>
-                                                    </div>
-
-                                                    <div
-                                                        class="form-group">
-                                                        <input
-                                                            type="email"
-                                                            class="form-control"
-                                                            id="guestEmail"
-                                                            name="email"
-                                                            placeholder="Email Address*"
-                                                            required>
-                                                    </div>
-
-                                                    <div
-                                                        class="form-group">
-                                                        <input
-                                                            type="tel"
-                                                            class="form-control"
-                                                            id="guestPhone"
-                                                            name="phone*"
-                                                            placeholder="Phone Number*"
-                                                            required>
-                                                    </div>
-
-                                                    <button
-                                                        type="submit"
-                                                        class="btn-inquiry w-100">
-                                                        Send Inquiry
-                                                    </button>
-                                                </form>
-
-                                                <p
-                                                    id="response"></p>
-
-                                                <script>
-                                                const scriptURL = "https://script.google.com/macros/s/AKfycbwg85Ek00f39z5Un4zGO8Cje8_yDWyJLvO_V_bQ-gizOLklNndpf70WqCB1_sMbQ9tixw/exec";
-
-                                                const form1 = document.getElementById("inquiryForm");
-
-                                                form1.addEventListener("submit", function (e) {
-                                                    e.preventDefault();
-
-                                                    const formData = new URLSearchParams(new FormData(form1)).toString();
-
-                                                    fetch(scriptURL, {
-                                                        method: "POST",
-                                                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                                                        body: formData
-                                                    })
-                                                        .finally(() => {
-                                                            // Redirect no matter what
-                                                            window.location.href = "/thanks.html";
-                                                        });
-                                                });
-                                            </script>
-
-                                            </div>
-                                        </div>
-
-                                        <div
-                                            class="col-md-6 col-12">
-                                            <!-- Embedded Map -->
-                                            <div
-                                                class="map-container">
-                                                <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.101402306494!2d79.65996567498547!3d29.396589548975978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0bf91b38146df%3A0x8030854fcba7bc98!2sDigantaa%20Resort!5e0!3m2!1sen!2sin!4v1758790121375!5m2!1sen!2sin"
-                                                    width="600" height="450"
-                                                    style="border:0;"
-                                                    allowfullscreen
-                                                    loading="lazy"
-                                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <script
-                                        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-                                    <script>
-    const scriptURL3 = "https://script.google.com/macros/s/AKfycbwg85Ek00f39z5Un4zGO8Cje8_yDWyJLvO_V_bQ-gizOLklNndpf70WqCB1_sMbQ9tixw/exec";
-
-    const inquiryForm = document.getElementById('inquiryForm');
-
-    inquiryForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Get form data
-        const formData = {
-            name: document.getElementById('guestName').value,
-            email: document.getElementById('guestEmail').value,
-            phone: document.getElementById('guestPhone').value
-        };
-
-        // Validation
-        for (let key in formData) {
-            if (!formData[key]) {
-                alert('Please fill in all fields');
-                return;
-            }
+      /* Responsive form + map layout */
+      @media (max-width: 768px) {
+        .row {
+          display: flex;
+          flex-direction: column;
         }
 
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.email)) {
-            alert('Please enter a valid email address');
-            return;
+        .row > .col-md-6 {
+          width: 100% !important;
+          max-width: 500px;
+          margin: 0 auto 20px auto;
         }
 
-        // Handle submit button
-        const submitBtn = inquiryForm.querySelector('.btn-inquiry');
-        const originalText = submitBtn.textContent;
+        .map-container iframe {
+          height: 300px;
+        }
+      }
 
-        submitBtn.textContent = 'Submitting...';
-        submitBtn.disabled = true;
+      .error-msg {
+        color: red;
+        font-size: 0.85rem;
+        margin-top: 4px;
+        display: none;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+      }
+    </style>
 
-        // Send to Google Apps Script
-        fetch(scriptURL3, {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
-        })
-            .then(res => res.text())
-            .then(text => {
-                // Try parsing JSON
-                let result;
-                try {
-                    result = JSON.parse(text);
-                } catch {
-                    result = { result: "success" };
-                }
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <div class="inquiry-form">
+          <h3 class="form-title">Book Your Stay</h3>
 
-                if (result.result === "success") {
-                    inquiryForm.reset();
-                }
+          <form id="inquiryForm">
+            <div class="form-group">
+              <input type="text" class="form-control" id="guestName" name="name" placeholder="Your Name*" required>
+            </div>
 
-                // Always redirect
-                window.location.href = "/thanks.html";
-            })
-            .catch(err => {
-                console.error("Network error: ", err);
-                // Redirect even on error
-                window.location.href = "/thanks.html";
-            });
+            <div class="form-group">
+              <input type="email" class="form-control" id="guestEmail" name="email" placeholder="Email Address*" required>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" class="form-control" id="guestPhone" name="phone" placeholder="Phone Number*" required>
+            </div>
+
+            <button type="submit" class="btn-inquiry">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-12">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.101402306494!2d79.65996567498547!3d29.396589548975978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0bf91b38146df%3A0x8030854fcba7bc98!2sDigantaa%20Resort!5e0!3m2!1sen!2sin!4v1758790121375!5m2!1sen!2sin" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ Clean single script with validation -->
+    <script>
+  // -------------------------------
+  // Google Apps Script URL
+  // -------------------------------
+  const MY_GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwg85Ek00f39z5Un4zGO8Cje8_yDWyJLvO_V_bQ-gizOLklNndpf70WqCB1_sMbQ9tixw/exec";
+
+  // -------------------------------
+  // Form and inputs
+  // -------------------------------
+  const myInquiryForm = document.getElementById('inquiryForm');
+  const myInputFullName = myInquiryForm.querySelector('input[name="name"]');
+  const myInputEmailAddr = myInquiryForm.querySelector('input[name="email"]');
+  const myInputPhoneNum = myInquiryForm.querySelector('input[name="phone"]');
+
+  // -------------------------------
+  // Function to create/reuse error span
+  // -------------------------------
+  function getOrCreateErrorSpan(myInput) {
+    const container = myInput.closest('.form-group');
+    let errSpan = container.querySelector('.error-text');
+    if (!errSpan) {
+      errSpan = document.createElement('span');
+      errSpan.className = 'error-text';
+      errSpan.style.color = 'red';
+      errSpan.style.fontSize = '0.85rem';
+      errSpan.style.display = 'none';
+      errSpan.style.marginTop = '4px';
+      container.appendChild(errSpan);
+    }
+    return errSpan;
+  }
+
+  const myNameError = getOrCreateErrorSpan(myInputFullName);
+  const myEmailError = getOrCreateErrorSpan(myInputEmailAddr);
+  const myPhoneError = getOrCreateErrorSpan(myInputPhoneNum);
+
+  // -------------------------------
+  // Submit event
+  // -------------------------------
+  myInquiryForm.addEventListener('submit', function(evt) {
+    evt.preventDefault();
+
+    // Hide previous errors
+    myNameError.style.display = 'none';
+    myEmailError.style.display = 'none';
+    myPhoneError.style.display = 'none';
+
+    const fullNameValue = myInputFullName.value.trim();
+    const emailValue = myInputEmailAddr.value.trim();
+    const phoneValue = myInputPhoneNum.value.replace(/\D/g,''); // remove non-digit characters
+
+    const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const PHONE_REGEX = /^[6-9]\d{9}$/;
+
+    let isValidForm = true;
+
+    if (!fullNameValue) {
+      myNameError.textContent = "Please enter your name.";
+      myNameError.style.display = "block";
+      isValidForm = false;
+    }
+
+    if (!EMAIL_REGEX.test(emailValue)) {
+      myEmailError.textContent = "Enter a valid email address.";
+      myEmailError.style.display = "block";
+      isValidForm = false;
+    }
+
+    if (!PHONE_REGEX.test(phoneValue)) {
+      myPhoneError.textContent = "Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.";
+      myPhoneError.style.display = "block";
+      isValidForm = false;
+    }
+
+    if (!isValidForm) return; // stop submission if invalid
+
+    const mySubmitButton = myInquiryForm.querySelector('button[type="submit"]');
+    if (mySubmitButton) {
+      mySubmitButton.disabled = true;
+      mySubmitButton.textContent = "Submitting...";
+    }
+
+    const myFormData = new URLSearchParams({
+      name: fullNameValue,
+      email: emailValue,
+      phone: phoneValue
+    }).toString();
+
+    fetch(MY_GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: myFormData
+    })
+    .then(() => {
+      myInquiryForm.reset();
+      window.location.href = "/thanks.html";
+    })
+    .catch(err => {
+      console.log("Network error: " + err);
+      window.location.href = "/thanks.html";
     });
+  });
 
-    // Glassmorphism effect on form focus
-    const formInputs = document.querySelectorAll('.form-control');
-    formInputs.forEach(input => {
-        input.addEventListener('focus', function () {
-            this.parentElement.style.transform = 'scale(1.02)';
-        });
-
-        input.addEventListener('blur', function () {
-            this.parentElement.style.transform = 'scale(1)';
-        });
-    });
+  // -------------------------------
+  // Clear errors on input
+  // -------------------------------
+  myInputFullName.addEventListener("input", () => myNameError.style.display = "none");
+  myInputEmailAddr.addEventListener("input", () => myEmailError.style.display = "none");
+  myInputPhoneNum.addEventListener("input", () => myPhoneError.style.display = "none");
 </script>
 
-                                </div>
-                            </div>
+
+
+
+  </div>
+</div>
+
                         </section>
                     </div>
 
